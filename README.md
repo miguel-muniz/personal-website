@@ -1,4 +1,4 @@
-web-iv-portfolio-site
+Personal Portfolio Website
 ===================
 
-Web IV Portfolio Sites
+This is the GitHub repo for [miguel-muniz.com](http://www.miguel-muniz.com)
