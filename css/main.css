@@ -430,9 +430,20 @@ template {
 	6.1 - Mobile
 	6.2 - Tablet
 --------------------------------------------------------------*/
+html {
+  background-color: #2e305a; }
+
 html * {
   padding: 0;
   margin: 0; }
+
+body {
+  opacity: 1;
+  transition: 1s opacity; }
+
+body.fade {
+  opacity: 0;
+  transition: none; }
 
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
@@ -495,10 +506,10 @@ ul {
   .icn-list li:not(:last-child) {
     margin-right: 10px; }
   .icn-list a {
-    color: #8A8BA9;
+    color: #fff;
     transition: all .4s; }
   .icn-list a:hover {
-    color: #fff; }
+    color: #8A8BA9; }
 
 /*--------------------------------------------------------------
 1.6 - Tables
@@ -553,10 +564,10 @@ ul {
 
 #left div {
   position: absolute;
-  top: -10vh;
-  left: -10vw;
-  right: -10vw;
-  bottom: -10vh; }
+  width: 150%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
 
 /*--------------------------------------------------------------
 3.1 - Site Body
@@ -565,7 +576,8 @@ ul {
   width: 50%;
   height: 100vh;
   float: right;
-  padding: 75px; }
+  padding: 75px;
+  background-color: #fff; }
 
 /*--------------------------------------------------------------
 3.1 - Site Footer
@@ -575,6 +587,11 @@ ul {
 4.0 - Media
 ################################################################
 --------------------------------------------------------------*/
+img {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none; }
+
 /*--------------------------------------------------------------
 ################################################################
 5.0 - Utility
