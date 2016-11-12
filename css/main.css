@@ -546,6 +546,7 @@ ul {
   overflow: hidden; }
 
 #left section {
+  padding: 75px;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -565,6 +566,13 @@ ul {
 #left div {
   position: absolute;
   width: 150%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+#left div li {
+  position: absolute;
+  width: 100%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); }
@@ -617,8 +625,25 @@ img {
 /*--------------------------------------------------------------
 6.1 - Mobile
 --------------------------------------------------------------*/
+@media screen and (max-width: 480px) {
+  #left section, #right {
+    padding: 25px; } }
 /*--------------------------------------------------------------
 6.2 - Tablet
 --------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+  #left {
+    float: none;
+    width: 100%;
+    height: 80vh;
+    min-height: 500px; }
+
+  #left section, #right {
+    padding: 50px; }
+
+  #right {
+    float: none;
+    width: 100%;
+    height: auto; } }
 
 /*# sourceMappingURL=main.css.map */
