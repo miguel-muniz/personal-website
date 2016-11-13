@@ -465,7 +465,13 @@ h1 {
   margin-top: 15px; }
 
 h2 {
-  font: 700 25px 'Catamaran', sans-serif; }
+  font: 700 25px 'Catamaran', sans-serif;
+  color: #2e305a; }
+
+h3 {
+  font: 600 20px/25px "Catamaran", sans-serif;
+  color: #2e305a;
+  hyphens: auto; }
 
 /*--------------------------------------------------------------
 1.2 - Body Copy
@@ -542,64 +548,102 @@ ul {
   float: left;
   background-color: #2e305a;
   text-align: center;
-  position: relative;
-  overflow: hidden; }
+  overflow: scroll; }
 
 #left section {
   padding: 75px;
   height: 100%;
+  min-height: 492px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  z-index: 100;
-  position: absolute;
-  width: 100%;
-  left: 50%;
-  transform: translateX(-50%); }
+  flex-direction: column; }
 
 #left p,
 #left .icn-list,
 #left a {
   margin-top: 30px; }
 
-#left div {
-  position: absolute;
-  width: 150%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); }
-
-#left div li {
-  position: absolute;
-  width: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); }
-
 /*--------------------------------------------------------------
-3.1 - Site Body
+3.1 - Homepage
 --------------------------------------------------------------*/
 #right {
   width: 50%;
   height: 100vh;
   float: right;
   padding: 75px;
-  background-color: #fff; }
+  background-color: #fff;
+  overflow: scroll; }
+
+#intro {
+  margin-bottom: 60px; }
+
+#portfolio > header {
+  margin-bottom: 15px; }
+
+#portfolio > header a {
+  color: #8A8BA9;
+  text-decoration: none;
+  transition: all .4s; }
+
+#portfolio > header a:hover {
+  color: #2e305a; }
+
+.project {
+  background-color: #2e305a;
+  border-radius: 5px;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 15px 15px 15px; }
+
+.project div {
+  visibility: hidden;
+  opacity: 0;
+  transition: all .4s;
+  background-color: #fff;
+  padding: 15px;
+  width: 100%;
+  border-radius: 5px; }
+
+.project:hover div {
+  visibility: visible;
+  opacity: 1; }
+
+.row > * {
+  width: calc((100% - 25px) / 2); }
+
+div.row {
+  display: flex; }
+
+.p-1-1, .p-2-1 {
+  height: 200px; }
+
+.p-2-1 {
+  width: 100%; }
+
+.p-1-2 {
+  height: 425px; }
+
+.row > *:first-child:not(:only-child) {
+  margin-right: 25px; }
+
+.row div section:not(:only-child):not(:last-child) {
+  margin-bottom: 25px; }
+
+div.row:not(:last-child) {
+  margin-bottom: 25px; }
 
 /*--------------------------------------------------------------
-3.1 - Site Footer
+3.2 - Project page
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+3.3 - Site Footer
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 ################################################################
 4.0 - Media
 ################################################################
 --------------------------------------------------------------*/
-img {
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  user-select: none; }
-
 /*--------------------------------------------------------------
 ################################################################
 5.0 - Utility
@@ -626,24 +670,58 @@ img {
 6.1 - Mobile
 --------------------------------------------------------------*/
 @media screen and (max-width: 480px) {
+  body {
+    overflow: auto; }
+
   #left section, #right {
-    padding: 25px; } }
+    padding: 15px !important; }
+
+  .row > * {
+    width: calc((100% - 15px) / 2); }
+
+  .p-2-1 {
+    width: 100%; }
+
+  .row > *:first-child:not(:only-child) {
+    margin-right: 15px; }
+
+  .row div section:not(:only-child):not(:last-child) {
+    margin-bottom: 15px; }
+
+  div.row:not(:last-child) {
+    margin-bottom: 15px; }
+
+  .p-1-2 {
+    height: 415px; } }
 /*--------------------------------------------------------------
 6.2 - Tablet
 --------------------------------------------------------------*/
 @media screen and (max-width: 768px) {
-  #left {
+  body {
+    overflow: auto; }
+
+  #left#left {
     float: none;
     width: 100%;
     height: 80vh;
     min-height: 500px; }
 
-  #left section, #right {
-    padding: 50px; }
-
-  #right {
+  #right#right {
     float: none;
     width: 100%;
     height: auto; } }
+/*--------------------------------------------------------------
+6.3 - Desktop
+--------------------------------------------------------------*/
+@media screen and (max-width: 1140px) {
+  #left {
+    width: calc((100% ) * 1/3); }
+
+  #left section {
+    padding: 50px; }
+
+  #right {
+    width: calc((100% ) * 2/3);
+    padding: 50px; } }
 
 /*# sourceMappingURL=main.css.map */
