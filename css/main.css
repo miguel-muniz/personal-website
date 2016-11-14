@@ -548,6 +548,7 @@ ul {
   float: left;
   background-color: #2e305a;
   text-align: center;
+  position: relative;
   overflow: scroll; }
 
 #left section {
@@ -557,12 +558,30 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column; }
+  flex-direction: column;
+  z-index: 100;
+  position: relative; }
 
 #left p,
 #left .icn-list,
 #left a {
   margin-top: 30px; }
+
+#left > div {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+#left > div div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vh;
+  min-width: 750px; }
 
 /*--------------------------------------------------------------
 3.1 - Homepage
