@@ -27,6 +27,10 @@
 	font-size: 1.5em;
 }
 
+.fa-angle-left:before {
+	content:  "\f104"
+}
+
 .fa-twitter:before {
 	content: "\f099"
 }
@@ -36,7 +40,7 @@
 }
 
 .fa-desktop:before {
-	content: "\f108"
+	content: "\f108";
 }
 
 .fa-instagram:before {

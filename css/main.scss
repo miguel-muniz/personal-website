@@ -99,6 +99,14 @@ h3 {
 	color: $violet;
 }
 
+#project h3 {
+	color: #000;
+}
+
+#project .p-card h3 {
+	color: $violet;
+}
+
 /*--------------------------------------------------------------
 1.2 - Body Copy
 --------------------------------------------------------------*/
@@ -150,7 +158,9 @@ ul {
 	li:not(:last-child) {
 		margin-right: 15px;
 	}
+}
 
+#left .icn-list {
 	a {
 		color: #fff;
 		transition: all .4s;
@@ -333,7 +343,7 @@ main {
 	color: $violet;
 }
 
-.project {
+.p-card {
 	background-color: $violet;
 	border-radius: 5px;
 	display: flex;
@@ -342,7 +352,7 @@ main {
 	text-decoration: none;
 }
 
-.project div {
+.p-card div {
 	visibility: hidden;
 	opacity: 0;
 	transition: all .3s;
@@ -352,48 +362,28 @@ main {
 	border-radius: 5px;
 }
 
-.project p {
+.p-card p {
 	color: #000;
 }
 
-.project:hover div {
+.p-card:hover div {
 	visibility: visible;
 	opacity: 1;
-}
-
-.row > * {
-	width: calc((100% - 25px) / 2);
-}
-
-div.row {
-	display: flex;
-}
-
-.p-1-1, .p-2-1 {
-	height: 200px;
-}
-
-.p-2-1 {
-	width: 100%;
-}
-
-.p-1-2 {
-	height: 400+$p-gutter;
 }
 
 .row > *:first-child:not(:only-child) {
 	margin-right: $p-gutter;
 }
 
-.project:not(:only-child):not(:last-child):not(.p-1-2) {
+.p-card:not(:only-child):not(:last-child):not(.r-2) {
 	margin-bottom: $p-gutter;
 }
 
-#portfolio div:nth-child(4) a:first-child {
+#portfolio div:nth-child(4) a:first-child, #project footer a:first-child {
 	margin-bottom: 0;
 }
 
-div.row:not(:last-child) {
+#portfolio div.row:not(:last-child) {
 	margin-bottom: $p-gutter;
 }
 
@@ -401,23 +391,84 @@ div.row:not(:last-child) {
 3.2 - Project page
 --------------------------------------------------------------*/
 
+#back {
+	margin-bottom: 30px;
+}
+
+#back a {
+	text-decoration: none;
+	color: $l4-violet;
+	transition: all .4s;
+
+	&:hover {
+		color: $violet;
+	}
+}
+
+#back i {
+	margin-right: 15px;
+	transform: translateY(1.5px);
+}
+
+#project header {
+	justify-content: space-between;
+}
+
+#project header div:last-child {
+	color: $l4-violet;
+	text-align: right;
+}
+
+#project .icn-list {
+	align-items: flex-end;
+}
+
+#project .icn-list a {
+	color: $l4-violet;
+	transition: all .4s;
+
+	&:hover {
+		color: $violet;
+	}
+}
+
+#project .fa-desktop {
+	font-size: 1.35em;
+}
+
+#project > header, #project section:not(:last-of-type) {
+	margin-bottom: 60px;
+}
+
+#project footer {
+	margin-top: 75px;
+}
+
+#project img {
+	background-color: $violet;
+	border-radius: 5px;
+}
+
+#project .c-100, #project section:nth-of-type(2) div.row {
+	margin-bottom: $p-gutter;
+}
 
 /*--------------------------------------------------------------
 3.3 - Site Footer
 --------------------------------------------------------------*/
 
-footer {
+#right > footer {
 	background-color: $violet;
 	padding: 50px 75px;
 	color: #fff;
 	text-align: center;
 }
 
-footer img {
+#right > footer img {
 	margin-bottom: 10px;
 }
 
-footer a {
+#right > footer a {
 	color: inherit;
 	transition: all .4s;
 	text-decoration: none;
@@ -431,23 +482,23 @@ footer a {
      1px 1px 0 $violet;
 }
 
-footer p:first-of-type {
+#right > footer p:first-of-type {
 	font-size: 16px;
 }
 
-footer p:first-of-type a:hover {
+#right > footer p:first-of-type a:hover {
 	color: $l4-violet;
 	border-bottom-color: $l4-violet;
 	bacgkround-color: #fff;
 }
 
-footer p:last-of-type {
+#right > footer p:last-of-type {
 	margin-top: 15px;
 	color: $l4-violet;
 	font-size: 15px;
 }
 
-footer p:last-of-type a:hover {
+#right > footer p:last-of-type a:hover {
 	color: #fff;
 }
 
@@ -485,9 +536,32 @@ footer p:last-of-type a:hover {
 
 
 /*--------------------------------------------------------------
-5.4 - Flex
+5.4 - Grid
 --------------------------------------------------------------*/
 
+.row {
+	display: flex;
+}
+
+.c-50 {
+	width: calc((100% - 25px) / 2);
+}
+
+.c-100 {
+	width: 100%;
+}
+
+.r-1 {
+	height: 200px;
+}
+
+.r-1-5 {
+	height: 300px;
+}
+
+.r-2 {
+	height: 400+$p-gutter;
+}
 
 
 /*--------------------------------------------------------------
@@ -514,7 +588,7 @@ main {
 	width: calc((100% ) * 2/3);
 }
 
-footer {
+#right > footer {
 	padding: 50px 50px;
 }
 
@@ -543,7 +617,7 @@ body {
 	height: auto;
 }
 
-.project div {
+.p-card div {
 	visibility: visible;
 	opacity: 1;
 }
@@ -568,19 +642,15 @@ body {
 	padding: 50px 15px;
 }
 
-.row > * {
+.c-50 {
 	width: calc((100% - 15px) / 2);
-}
-
-.p-2-1 {
-	width: 100%;
 }
 
 .row > *:first-child:not(:only-child) {
 	margin-right: 15px;
 }
 
-.row .project:not(:only-child):not(:last-child):not(.p-1-2) {
+.row .p-card:not(:only-child):not(:last-child):not(.p-1-2) {
 	margin-bottom: 15px;
 }
 
@@ -588,17 +658,21 @@ div.row:not(:last-child) {
 	margin-bottom: 15px;
 }
 
-.p-1-2 {
+.r-2 {
 	height: 415px;
 }
 
-footer {
+#right > footer {
 	padding: 50px 15px;
 }
 
-.project p {
+.p-card p {
 	font-size: 15px;
 	line-height: 22px;
+}
+
+#project section:nth-of-type(2) .c-100 {
+	margin-bottom: 15px;
 }
 
 
