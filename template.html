@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Hello. I'm Miguel Muniz, a student of the GD|MA program living in Lincoln, NE. I specialize in graphic design, UI/UX design, web development, and pencils.">
 <title>Miguel Muniz | Designer &amp; Developer</title>
-<link href="https://fonts.googleapis.com/css?family=Catamaran:400,500,600,700|Varela+Round" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Catamaran:400,500,600,700%7CVarela+Round" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/main.css">
 <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 <!-- HTML5 shim and Respond.js -->
@@ -57,12 +57,22 @@
 						<h3>Project Type</h3>
 					</div>
 					<div>
-						<p>Also on:</p>
 						<ul class="icn-list">
-							<li><a href="" target="_blank"><i class="fa fa-2x fa-desktop" aria-hidden="true"></i></a></li>
-							<li><a href="https://github.com/" target="_blank"><i class="fa fa-2x fa-github" aria-hidden="true"></i></a></li>
-							<li><a href="https://dribbble.com/" target="_blank"><i class="fa fa-2x fa-dribbble" aria-hidden="true"></i></a></li>
-							<li><a href="https://behance.net/" target="_blank"><i class="fa fa-2x fa-behance" aria-hidden="true"></i></a></li>
+							<li>
+								<span class="tooltip"><span>AIGA NE Show: Student Silver &amp; Judge's choice</span>
+									<a href="https://github.com/" target="_blank"><i class="fa fa-2x fa-trophy" aria-hidden="true"></i></a>
+								</span>
+							</li>
+							<li>
+								<span class="tooltip"><span>View the live website</span>
+									<a href="" target="_blank"><i class="fa fa-2x fa-desktop" aria-hidden="true"></i></a>
+								</span>
+							</li>
+							<li>
+								<span class="tooltip"><span>View the code</span>
+									<a href="https://github.com/" target="_blank"><i class="fa fa-2x fa-github" aria-hidden="true"></i></a>
+								</span>
+							</li>
 						</ul>
 					</div>
 				</header>
@@ -89,7 +99,7 @@
 			<footer>
 				<h2>More Projects</h2>
 				<div class="row">
-					<a href="template.html" class="p-card c-50 r-1">
+					<a id="p-card-one" href="template.html" class="p-card c-50 r-1">
 						<div>
 							<header>
 								<h3>The Black Cat</h3>
@@ -97,7 +107,7 @@
 							<p>Book Design</p>
 						</div>
 					</a>
-					<a href="template.html" class="p-card c-50 r-1">
+					<a id="p-card-two" href="template.html" class="p-card c-50 r-1">
 						<div>
 							<header>
 								<h3>No Format</h3>
@@ -110,14 +120,13 @@
 		</section>
 	</main>
 	<footer>
-		<img id="description-icon" src="img/icn-pencil.svg" width="50" alt="">
 		<p>Thanks for taking a look! If you like any of my work, or would like a resume, you can reach me at: <a href="mailto:hello@miguel-muniz.com">hello@miguel-muniz.com</a></p>
+		<img id="description-icon" src="img/icn-pencil.svg" width="45" alt="">
 		<p>Designed and developed by <span id="description">pencil nerd.</span></p>
 	</footer>
 </section>
-
-</body>
 <script src="js/parallax.js"></script>
 <script src="js/functions.js"></script>
 <script src="js/requestAnimationFrame.js"></script>
+</body>
 </html>

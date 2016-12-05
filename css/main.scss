@@ -30,15 +30,15 @@
 	6.2 - Tablet
 --------------------------------------------------------------*/
 
-
-$d1-violet: #1D1F4A;
+$d1-violet: #1d1f4a;
 $violet: #2e305a;
-$l1-violet: #454A73;
-$l2-violet: #565A81;
-$l3-violet: #65678F;
-$l4-violet: #8A8BA9;
+$l1-violet: #454a73;
+$l2-violet: #565a81;
+$l3-violet: #65678f;
+$l4-violet: #8a8ba9;
 
 $p-gutter: 25px;
+$sec-padding: 75px;
 
 html {
 	background-color: $d1-violet;
@@ -68,10 +68,10 @@ body.fade {
 }
 
 ::selection {
-  background: #B5B5C7; /* WebKit/Blink Browsers */
+  background: #B5B5C7;
 }
 ::-moz-selection {
-  background: #B5B5C7; /* Gecko Browsers */
+  background: #B5B5C7;
 }
 
 /*--------------------------------------------------------------
@@ -194,7 +194,7 @@ ul {
     padding: 15px;
     border-radius: 5px;
     position: absolute;
-    left: -75px;
+    right: -89px;
     bottom: 30px;
 }
 
@@ -264,7 +264,7 @@ ul {
 }
 
 #left section {
-	padding: 75px;
+	padding: $sec-padding;
 	height: 100%;
 	min-height: 492px;
 	display: flex;
@@ -321,8 +321,17 @@ ul {
 	overflow: scroll;
 }
 
-main {
-	padding: 75px;
+main > section {
+	padding-left: $sec-padding;
+	padding-right: $sec-padding;
+}
+
+main > section:first-child {
+	padding-top: $sec-padding;
+}
+
+main > section:last-child {
+	padding-bottom: $sec-padding;
 }
 
 #intro {
@@ -379,7 +388,7 @@ main {
 	margin-bottom: $p-gutter;
 }
 
-#portfolio div:nth-child(4) a:first-child, #project footer a:first-child {
+#portfolio div:nth-child(4) a:first-child, #project footer a:first-child, #portfolio > div.row:nth-of-type(3) {
 	margin-bottom: 0;
 }
 
@@ -393,6 +402,7 @@ main {
 
 #back {
 	margin-bottom: 30px;
+	padding-top: 25px;
 }
 
 #back a {
@@ -420,6 +430,7 @@ main {
 }
 
 #project .icn-list {
+	margin-top: 7px;
 	align-items: flex-end;
 }
 
@@ -465,7 +476,7 @@ main {
 }
 
 #right > footer img {
-	margin-bottom: 10px;
+	margin-top: 16px;
 }
 
 #right > footer a {
@@ -489,11 +500,9 @@ main {
 #right > footer p:first-of-type a:hover {
 	color: $l4-violet;
 	border-bottom-color: $l4-violet;
-	bacgkround-color: #fff;
 }
 
 #right > footer p:last-of-type {
-	margin-top: 15px;
 	color: $l4-violet;
 	font-size: 15px;
 }
@@ -510,6 +519,9 @@ main {
 ################################################################
 --------------------------------------------------------------*/
 
+#scene img {
+	width: 100%;
+}
 
 /*--------------------------------------------------------------
 ################################################################
@@ -580,17 +592,13 @@ main {
 	width: calc((100% ) * 1/3);
 }
 
-main {
-	padding: 50px;
-}
-
 #right {
 	width: calc((100% ) * 2/3);
 }
 
-#right > footer {
-	padding: 50px 50px;
-}
+// #right > footer {
+// 	padding: 50px 50px;
+// }
 
 }
 
@@ -599,6 +607,9 @@ main {
 --------------------------------------------------------------*/
 
 @media screen and (max-width: 868px) {
+
+$sec-padding: 50px;
+
 
 body {
 	overflow: auto;
@@ -626,6 +637,29 @@ h3 {
 	font-size: 18px;
 }
 
+// main > section {
+// 	padding-left: 50px;
+// 	padding-right: 50px;
+// }
+
+#left section {
+	padding: $sec-padding;
+}
+
+main > section {
+	padding-left: $sec-padding;
+	padding-right: $sec-padding;
+}
+
+main > section:first-child {
+	padding-top: $sec-padding;
+}
+
+main > section:last-child {
+	padding-bottom: $sec-padding;
+}
+
+
 }
 
 /*--------------------------------------------------------------
@@ -634,12 +668,15 @@ h3 {
 
 @media screen and (max-width: 480px) {
 
+$sec-padding: 15px;
+
 body {
 	overflow: auto;
 }
 
-#left section, main {
-	padding: 50px 15px;
+main > section {
+	padding-left: 15px;
+	padding-right: 15px;
 }
 
 .c-50 {
@@ -650,9 +687,9 @@ body {
 	margin-right: 15px;
 }
 
-.row .p-card:not(:only-child):not(:last-child):not(.p-1-2) {
-	margin-bottom: 15px;
-}
+// .row .p-card:not(:only-child):not(:last-child):not(.p-1-2) {
+// 	margin-bottom: 15px;
+// }
 
 div.row:not(:last-child) {
 	margin-bottom: 15px;
@@ -671,8 +708,27 @@ div.row:not(:last-child) {
 	line-height: 22px;
 }
 
-#project section:nth-of-type(2) .c-100 {
-	margin-bottom: 15px;
+main > section {
+	padding-left: $sec-padding;
+	padding-right: $sec-padding;
+}
+
+$p-gutter: 15px;
+
+.row > *:first-child:not(:only-child) {
+	margin-right: $p-gutter;
+}
+
+.p-card:not(:only-child):not(:last-child):not(.r-2) {
+	margin-bottom: $p-gutter;
+}
+
+#portfolio div.row:not(:last-child) {
+	margin-bottom: $p-gutter;
+}
+
+.r-2 {
+	height: 400+$p-gutter;
 }
 
 

@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Hello. I'm Miguel Muniz, a student of the GD|MA program living in Lincoln, NE. I specialize in graphic design, UI/UX design, web development, and pencils.">
 <title>Miguel Muniz | Designer &amp; Developer</title>
-<link href="https://fonts.googleapis.com/css?family=Catamaran:400,500,600,700|Varela+Round" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Catamaran:400,500,600,700%7CVarela+Round" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/main.css">
 <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 <!-- HTML5 shim and Respond.js -->
@@ -22,24 +22,22 @@
 <header id="left">
 	<section>
 		<img src="img/muniz-logo.svg" width="100" alt="Miguel Muniz's logo">
-		<header>
-			<h1>Miguel Muniz</h1>
-		</header>
+		<h1>Miguel Muniz</h1>
 		<p>I’m a graphic designer, UI/UX designer, and front-end web developer.</p>
 		<a href="mailto:hello@miguel-muniz.com">Get In Touch</a>
 		<ul class="icn-list">
-			<li><a href="https://twitter.com/migmuni" target="_blank"><i class="fa fa-2x fa-twitter" aria-hidden="true"></i></a></li>
-			<li><a href="https://instagram.com/migmuni" target="_blank"><i class="fa fa-2x fa-instagram" aria-hidden="true"></i></a></li>
-			<li><a href="https://github.com/migmuni" target="_blank"><i class="fa fa-2x fa-github" aria-hidden="true"></i></a></li>
-			<li><a href="https://dribbble.com/migmuni" target="_blank"><i class="fa fa-2x fa-dribbble" aria-hidden="true"></i></a></li>
-			<li><a href="https://behance.net/migmuni" target="_blank"><i class="fa fa-2x fa-behance" aria-hidden="true"></i></a></li>
+			<li><a href="https://twitter.com/migmuni" target="_blank" rel="noopener noreferrer"><i class="fa fa-2x fa-twitter"></i></a></li>
+			<li><a href="https://instagram.com/migmuni" target="_blank" rel="noopener noreferrer"><i class="fa fa-2x fa-instagram"></i></a></li>
+			<li><a href="https://github.com/migmuni" target="_blank" rel="noopener noreferrer"><i class="fa fa-2x fa-github"></i></a></li>
+			<li><a href="https://dribbble.com/migmuni" target="_blank" rel="noopener noreferrer"><i class="fa fa-2x fa-dribbble"></i></a></li>
+			<li><a href="https://behance.net/migmuni" target="_blank" rel="noopener noreferrer"><i class="fa fa-2x fa-behance"></i></a></li>
 		</ul>
 	</section>
-	<div role="image">
+	<div aria-hidden="true" role="presentation">
 		<div>
 			<ul id="scene" data-clipRelativeInput="true">
-				<li class="layer" data-depth="0.20"><img width="100%" src="img/bg-symbols.svg"></li>
-				<li class="layer" data-depth="0.30"><img width="100%" src="img/bg-icons.svg"></li>
+				<li class="layer" data-depth="0.20"><img width="100" src="img/bg-symbols.svg" alt="Collection of branding icons"></li>
+				<li class="layer" data-depth="0.30"><img width="100" src="img/bg-icons.svg" alt="Collection of symbol icons"></li>
 			</ul>
 		</div>
 	</div>
@@ -50,12 +48,12 @@
 			<header>
 				<h2>Hello. I'm Miguel Muniz</h2>
 			</header>
-			<p>I'm a student of the GD|MA program at SCC. Currently, I live in Lincoln and plan on graduating in 2017 <i class="fa fa-lg" aria-hidden="true">&#xf19d;</i>. I’ve developed a passion for all things graphic design <i class="fa fa-lg" aria-hidden="true">&#xf040;</i> , UI/UX design <i class="fa fa-lg" aria-hidden="true">&#xf10b;</i> , and front-end web development <i class="fa fa-lg" aria-hidden="true">&#xf121;</i> . When I’m not doing any of those things, I play video games <i class="fa fa-lg" aria-hidden="true">&#xf11b;</i> and geek out about <span class="tooltip"><span>Yes pencils! I have this strange problem where I have a fascination with office supplies.</span>pencils.</span></p>
+			<p>I'm a student of the GD|MA program at SCC. Currently, I live in Lincoln and plan on graduating in 2017. I’ve developed a passion for all things graphic design, UI/UX design, and front-end web development. When I’m not doing any of those things, I play video games and geek out about pencils.</p>
 		</section>
 		<section id="portfolio">
 			<header>
 				<h2>My Work</h2>
-				<p>My portfolio and this website are still a work in progress. I'll make sure to announce when they're ready for the public on my <a href="https://twitter.com/migmuni" target="_blank">twitter.</a></p>
+				<p>My portfolio and this website are still a work in progress. I'll make sure to announce when they're ready for the public on my <a href="https://twitter.com/migmuni" target="_blank" rel="noopener noreferrer">twitter.</a></p>
 			</header>
 			<div class="row">
 				<div class="c-50">
@@ -119,7 +117,7 @@
 						<header>
 							<h3>Nintendo</h3>
 						</header>
-						<p>Web Design&#47;Dev</p>
+						<p>Web Design &#47; Dev</p>
 					</div>
 				</a>
 				<div class="c-50">
@@ -154,14 +152,13 @@
 		</section>
 	</main>
 	<footer>
-		<img id="description-icon" src="img/icn-pencil.svg" width="50" alt="">
 		<p>Thanks for taking a look! If you like any of my work, or would like a resume, you can reach me at: <a href="mailto:hello@miguel-muniz.com">hello@miguel-muniz.com</a></p>
+		<img id="description-icon" src="img/icn-pencil.svg" width="45" alt="Pencil icon">
 		<p>Designed and developed by <span id="description">pencil nerd.</span></p>
 	</footer>
 </section>
-
-</body>
 <script src="js/parallax.js"></script>
 <script src="js/functions.js"></script>
 <script src="js/requestAnimationFrame.js"></script>
+</body>
 </html>

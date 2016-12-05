@@ -31,6 +31,10 @@
 	content:  "\f104"
 }
 
+.fa-trophy:before {
+	content:  "\f091"
+}
+
 .fa-twitter:before {
 	content: "\f099"
 }
