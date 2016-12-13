@@ -8,26 +8,20 @@
 	1.1 - Headings
 	1.2 - Body Copy
 	1.3 - Buttons
-	1.4 - Forms
-	1.5 - Lists
-	1.6 - Tables
-2.0 - Navigation Menus
-	3.1 - Main Menu
-	3.2 - Sub Menu
-	3.3 - Footer Menu
-3.0 - Content
-	3.1 - Site Header
-	3.2 - Site Body
-	3.3 - Site Footer
-4.0 - Media
-5.0 - Utility
-	5.1 - Width & Height
-	5.2 - Margin & Padding
-	5.3 - Color
-	5.4 - Flex
-6.0 - Media Query
-	6.1 - Mobile
-	6.2 - Tablet
+	1.4 - Links
+2.0 - Content
+	2.1 - Site Header
+	2.2 - Site Body
+	2.3 - Site Footer
+3.0 - Media
+4.0 - Utility
+	4.1 - Width & Height
+	4.2 - Margin & Padding
+	4.3 - Color
+	4.4 - Flex
+5.0 - Media Query
+	5.1 - Mobile
+	5.2 - Tablet
 --------------------------------------------------------------*/
 
 $d1-violet: #1d1f4a;
@@ -50,13 +44,11 @@ html * {
 }
 
 body {
-	opacity: 1;
 	transition: 1s opacity;
 }
 
 body.fade {
-	opacity: 0;
-    transition: none;
+	transition: none;
 }
 
 *, *:before, *:after {
@@ -92,20 +84,10 @@ h1 {
 h2 {
 	font: 700 25px 'Catamaran', sans-serif;
 	line-height: 30px;
-	color: $violet;
 }
 
 h3 {
 	font: 600 #{20px}/#{25px} 'Catamaran', sans-serif;
-	color: $violet;
-}
-
-#project h3 {
-	color: #000;
-}
-
-#project .p-card h3 {
-	color: $violet;
 }
 
 /*--------------------------------------------------------------
@@ -119,34 +101,14 @@ p {
 /*--------------------------------------------------------------
 1.3 - Buttons
 --------------------------------------------------------------*/
-
-#left {
-	color: #fff;
-}
-
 #left section > a {
 	padding: 10px 20px;
 	border: 2px solid #fff;
-	border-radius: 5px;
 	font: 500 17px 'Catamaran', sans-serif;
-	color: #fff;
-	text-decoration: none;
-	transition: all .5s;
-}
-
-#left section > a:hover {
-	background-color: #fff;
-	color: $violet;
 }
 
 /*--------------------------------------------------------------
-1.4 - Forms
---------------------------------------------------------------*/
-
-
-
-/*--------------------------------------------------------------
-1.5 - Links
+1.4 - Links
 --------------------------------------------------------------*/
 
 ul {
@@ -154,60 +116,29 @@ ul {
 }
 
 .icn-list {
-	display: flex;
-
 	li:not(:last-child) {
 		margin-right: 15px;
 	}
 }
 
-#left .icn-list {
-	a {
-		color: #fff;
-		transition: all .4s;
-	}
-
-	a:hover {
-		color:  $l4-violet;
-	}
-}
-
-.tooltip:hover span {
-	visibility: visible;
-	opacity: 1;
-}
-
-.tooltip {
-	position: relative;
-	color: $l4-violet;
-}
-
 .tooltip span {
-	visibility: hidden;
-	opacity: 0;
 	transition: opacity, .4s;
-	font-size: 15px;
 	line-height: 20px;
-    width: 200px;
-    color: #fff;
+	width: 200px;
 	background-color: rgba(29, 31, 74, .90);
-    text-align: center;
-    padding: 15px;
-    border-radius: 5px;
-    position: absolute;
-    top: -150%;
-    right: 150%;
+	border-radius: 5px;
+	top: -150%;
+	right: 150%;
 }
 
 .tooltip span::after {
-    content: " ";
-    position: absolute;
-    top: 50%;
-    left: 100%; /* To the right of the tooltip */
-    margin-top: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent transparent transparent $violet;
+	content: " ";
+	top: 50%;
+	left: 100%;
+	margin-top: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: transparent transparent transparent $violet;
 }
 
 .fa-lg {
@@ -215,111 +146,59 @@ ul {
 }
 
 /*--------------------------------------------------------------
-1.6 - Tables
---------------------------------------------------------------*/
-
-
-
-/*--------------------------------------------------------------
 ################################################################
-2.0 - Navigation
+2.0 - Content
 ################################################################
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
-2.1 - Main Menu
---------------------------------------------------------------*/
-
-
-
-/*--------------------------------------------------------------
-2.2 - Sub Menu
---------------------------------------------------------------*/
-
-
-
-/*--------------------------------------------------------------
-2.3 - Footer Menu
---------------------------------------------------------------*/
-
-
-
-/*--------------------------------------------------------------
-################################################################
-3.0 - Content
-################################################################
---------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
-3.1 - Site Header
+2.1 - Site Header
 --------------------------------------------------------------*/
 
 #left {
-	width: 50%;
-	height: 100vh;
 	float: left;
-	background-color: #2e305a;
-	text-align: center;
-	position: relative;
-	overflow: scroll;
 }
 
 #left section {
 	padding: $sec-padding;
-	height: 100%;
-	min-height: 492px;
-	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 	z-index: 100;
-	position: relative;
 }
 
-#left p,
-#left .icn-list,
-#left a {
+#left p, #left .icn-list, #left a {
 	margin-top: 30px;
 }
 
 #left > div {
 	overflow: hidden;
-	position: absolute;
 	top: 0;
 	left: 0;
-	width: 100%;
-	min-height: 492px;
-	height: 100%;
 }
 
-#left > div div {
-	position: absolute;
+#left > div div, #left > div li {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+}
+
+#left > div div {
 	min-width: 750px;
 }
 
 #left > div li {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
 	width: 100vh;
 	min-width: 900px;
 }
 
 
 /*--------------------------------------------------------------
-3.1 - Homepage
+2.1 - Homepage
 --------------------------------------------------------------*/
 
 #right {
-	width: 50%;
-	height: 100vh;
 	float: right;
-	background-color: #fff;
-	overflow: scroll;
 }
 
 main > section {
@@ -335,50 +214,12 @@ main > section:last-child {
 	padding-bottom: $sec-padding;
 }
 
-#intro {
-	margin-bottom: 60px;
-}
-
 #portfolio > header {
 	margin-bottom: 15px;
 }
 
-#portfolio > header a {
-	color: $l4-violet;
-	text-decoration: none;
-	transition: all .4s;
-}
-
-#portfolio > header a:hover {
-	color: $violet;
-}
-
-.p-card {
-	background-color: $violet;
-	border-radius: 5px;
-	display: flex;
-	align-items: flex-end;
-	padding: 15px;
-	text-decoration: none;
-}
-
 .p-card div {
-	visibility: hidden;
-	opacity: 0;
 	transition: all .3s;
-	background-color: #fff;
-	padding: 15px;
-	width: 100%;
-	border-radius: 5px;
-}
-
-.p-card p {
-	color: #000;
-}
-
-.p-card:hover div {
-	visibility: visible;
-	opacity: 1;
 }
 
 .row > *:first-child:not(:only-child) {
@@ -398,18 +239,12 @@ main > section:last-child {
 }
 
 /*--------------------------------------------------------------
-3.2 - Project page
+2.2 - Project page
 --------------------------------------------------------------*/
 
 #back {
 	margin-bottom: 30px;
 	padding-top: 25px;
-}
-
-#back i {
-	opacity: 0;
-	visibility: hidden;
-	transition: all .4s;
 }
 
 #back a {
@@ -423,17 +258,6 @@ main > section:last-child {
 
 #back a:hover i {
 	opacity: 100;
-	visibility: visible;
-}
-
-#back a {
-	text-decoration: none;
-	color: $l4-violet;
-	transition: all .4s;
-
-	&:hover {
-		color: $violet;
-	}
 }
 
 #back i {
@@ -445,49 +269,28 @@ main > section:last-child {
 	justify-content: space-between;
 }
 
-#project h2 {
+#project h2, #project h3 {
 	text-align: left;
 }
 
 #project h3 {
 	margin-bottom: 5px;
-	text-align: left;
 }
 
 #project header div:last-child {
-	color: $l4-violet;
 	text-align: right;
 }
 
 #project .icn-list {
 	margin-top: 7px;
-	align-items: flex-end;
-}
-
-#project .icn-list a {
-	color: $l4-violet;
-	transition: all .4s;
-
-	&:hover {
-		color: $violet;
-	}
 }
 
 #project .fa-desktop {
 	font-size: 1.35em;
 }
 
-#project > header, #project section:not(:last-of-type) {
-	margin-bottom: 60px;
-}
-
 #project footer {
 	margin-top: 75px;
-}
-
-#project img {
-	background-color: $violet;
-	border-radius: 5px;
 }
 
 #project .c-100, #project section:nth-of-type(2) div.row {
@@ -495,14 +298,11 @@ main > section:last-child {
 }
 
 /*--------------------------------------------------------------
-3.3 - Site Footer
+2.3 - Site Footer
 --------------------------------------------------------------*/
 
 #right > footer {
-	background-color: $violet;
 	padding: 50px 75px;
-	color: #fff;
-	text-align: center;
 }
 
 #right > footer img {
@@ -511,16 +311,14 @@ main > section:last-child {
 
 #right > footer a {
 	color: inherit;
-	transition: all .4s;
-	text-decoration: none;
 	display: inline-block;
 	line-height: 15px;
 	border-bottom: 1px solid #fff;
-    text-shadow:
+	text-shadow:
    -1px -1px 0 $violet,
-    1px -1px 0 $violet,
-    -1px 1px 0 $violet,
-     1px 1px 0 $violet;
+	1px -1px 0 $violet,
+	-1px 1px 0 $violet,
+	1px 1px 0 $violet;
 }
 
 #right > footer p:first-of-type {
@@ -528,57 +326,136 @@ main > section:last-child {
 }
 
 #right > footer p:first-of-type a:hover {
-	color: $l4-violet;
 	border-bottom-color: $l4-violet;
 }
 
-#right > footer p:last-of-type {
-	color: $l4-violet;
-	font-size: 15px;
-}
-
-#right > footer p:last-of-type a:hover {
-	color: #fff;
-}
-
-
-
 /*--------------------------------------------------------------
 ################################################################
-4.0 - Media
+3.0 - Media
 ################################################################
 --------------------------------------------------------------*/
 
-#scene img {
+/*--------------------------------------------------------------
+################################################################
+4.0 - Utility
+################################################################
+--------------------------------------------------------------*/
+#left section > a, .p-card, .p-card div, #project img {
+	border-radius: 5px;
+}
+
+#left section > a, #portfolio > header a, .p-card, #back a, #right > footer a {
+	text-decoration: none;
+}
+
+#left section > a, #left .icn-list, #portfolio > header a, #back i, #back a, #project .icn-list a, #right > footer a {
+	transition: all .4s;
+}
+
+.tooltip:hover span, .p-card:hover div, #back a:hover i {
+	visibility: visible;
+}
+
+.tooltip, #left, #left section {
+	position: relative;
+}
+
+.tooltip span, #left, #right > footer {
+	text-align: center;
+}
+
+.icn-list, #left section, .p-card {
+	display: flex;
+}
+
+.tooltip span, .p-card div, #back i {
+	visibility: hidden;
+}
+
+.tooltip span, #right > footer p:last-of-type {
+	font-size: 15px;
+}
+
+.tooltip span, .tooltip span::after, #left > div, #left > div div, #left > div li {
+	position: absolute;
+}
+
+#left, #right {
+	overflow: scroll;
+}
+
+.p-card, #project .icn-list {
+	align-items: flex-end;
+}
+
+/*--------------------------------------------------------------
+4.1 - Width & Height
+--------------------------------------------------------------*/
+
+#left, #right {
+	width: 50%;
+	height: 100vh;
+}
+
+#left section, #left > div {
+	height: 100%;
+	min-height: 492px;
+}
+
+#left > div, .p-card div, #scene img {
 	width: 100%;
 }
 
 /*--------------------------------------------------------------
-################################################################
-5.0 - Utility
-################################################################
+4.2 - Margin & Padding
 --------------------------------------------------------------*/
 
+.tooltip span, .p-card, .p-card div {
+	padding: 15px;
+}
+
+#intro, #project > header, #project section:not(:last-of-type) {
+	margin-bottom: 60px;
+}
+
 /*--------------------------------------------------------------
-5.1 - Width & Height
+4.3 - Color
 --------------------------------------------------------------*/
 
+body, .tooltip:hover span, .p-card:hover div {
+	opacity: 1;
+}
 
+body.fade, .tooltip span, .p-card div, #back i {
+	opacity: 0;
+}
+
+h2, h3, #project .p-card h3, #left section > a:hover, #portfolio > header a:hover, #back a:hover:hover, #project .icn-list a:hover {
+	color: $violet;
+}
+
+#left .icn-list a:hover, .tooltip, #portfolio > header a, #back a, #project header div:last-child, #project .icn-list a, #right > footer p:first-of-type a:hover, #right > footer p:last-of-type {
+	color: $l4-violet;
+}
+
+#project h3, .p-card p {
+	color: #000;
+}
+
+.tooltip span, #left, #left section > a, #right > footer, #right > footer p:last-of-type a:hover, #left .icn-list a {
+	color: #fff;
+}
+
+#left section > a:hover, #right, .p-card div {
+	background-color: #fff;
+}
+
+#left, .p-card, #project img, #right > footer {
+	background-color: $violet;
+}
 
 /*--------------------------------------------------------------
-5.2 - Margin & Padding
---------------------------------------------------------------*/
-
-
-
-/*--------------------------------------------------------------
-5.3 - Color
---------------------------------------------------------------*/
-
-
-
-/*--------------------------------------------------------------
-5.4 - Grid
+4.4 - Grid
 --------------------------------------------------------------*/
 
 .row {
@@ -605,7 +482,6 @@ main > section:last-child {
 	height: 400+$p-gutter;
 }
 
-
 /*--------------------------------------------------------------
 ################################################################
 5.0 - Media Query
@@ -613,7 +489,7 @@ main > section:last-child {
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
-6.1 - Desktop
+5.1 - Desktop
 --------------------------------------------------------------*/
 
 @media screen and (max-width: 1140px) {
@@ -626,14 +502,10 @@ main > section:last-child {
 	width: calc((100% ) * 2/3);
 }
 
-// #right > footer {
-// 	padding: 50px 50px;
-// }
-
 }
 
 /*--------------------------------------------------------------
-6.2 - Tablet
+5.2 - Tablet
 --------------------------------------------------------------*/
 
 @media screen and (max-width: 868px) {
@@ -684,11 +556,10 @@ main > section:last-child {
 	padding-bottom: $sec-padding;
 }
 
-
 }
 
 /*--------------------------------------------------------------
-6.3 - Mobile
+5.3 - Mobile
 --------------------------------------------------------------*/
 
 @media screen and (max-width: 480px) {
@@ -711,10 +582,6 @@ main > section {
 .row > *:first-child:not(:only-child) {
 	margin-right: 15px;
 }
-
-// .row .p-card:not(:only-child):not(:last-child):not(.p-1-2) {
-// 	margin-bottom: 15px;
-// }
 
 div.row:not(:last-child) {
 	margin-bottom: 15px;
@@ -755,6 +622,5 @@ $p-gutter: 15px;
 .r-2 {
 	height: 400+$p-gutter;
 }
-
 
 }
