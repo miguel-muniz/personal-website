@@ -57,16 +57,16 @@ window.onload = function(){
 		console.log(card2Num);
 	}
 	var pLink = [
-		"0.html",
-		"1.html",
-		"2.html",
-		"3.html",
-		"4.html",
-		"5.html",
-		"6.html",
-		"7.html",
-		"8.html",
-		"9.html"
+		"orbit-ad-campaign.html",
+		"rayonier-annual-report.html",
+		"metrio-user-interface.html",
+		"restore-gorilla-grocery-metrio.html",
+		"the-black-cat-book-design.html",
+		"no-format-identity-design.html",
+		"nintendo-web-design-dev.html",
+		"staples-ad-campaign.html",
+		"kikkoman-promo-design.html",
+		"dot-dot-package-design.html"
 	];
 	var pImage = [
 		"image",

@@ -91,6 +91,7 @@ h1 {
 
 h2 {
 	font: 700 25px 'Catamaran', sans-serif;
+	line-height: 30px;
 	color: $violet;
 }
 
@@ -194,19 +195,19 @@ ul {
     padding: 15px;
     border-radius: 5px;
     position: absolute;
-    right: -89px;
-    bottom: 30px;
+    top: -150%;
+    right: 150%;
 }
 
 .tooltip span::after {
     content: " ";
     position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
+    top: 50%;
+    left: 100%; /* To the right of the tooltip */
+    margin-top: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: $violet transparent transparent transparent;
+    border-color: transparent transparent transparent $violet;
 }
 
 .fa-lg {
@@ -405,6 +406,26 @@ main > section:last-child {
 	padding-top: 25px;
 }
 
+#back i {
+	opacity: 0;
+	visibility: hidden;
+	transition: all .4s;
+}
+
+#back a {
+	margin-left: -18px;
+	transition: margin-left .4s;
+}
+
+#back a:hover {
+	margin-left: 0;
+}
+
+#back a:hover i {
+	opacity: 100;
+	visibility: visible;
+}
+
 #back a {
 	text-decoration: none;
 	color: $l4-violet;
@@ -416,12 +437,21 @@ main > section:last-child {
 }
 
 #back i {
-	margin-right: 15px;
+	margin-right: 10px;
 	transform: translateY(1.5px);
 }
 
 #project header {
 	justify-content: space-between;
+}
+
+#project h2 {
+	text-align: left;
+}
+
+#project h3 {
+	margin-bottom: 5px;
+	text-align: left;
 }
 
 #project header div:last-child {
@@ -636,11 +666,6 @@ body {
 h3 {
 	font-size: 18px;
 }
-
-// main > section {
-// 	padding-left: 50px;
-// 	padding-right: 50px;
-// }
 
 #left section {
 	padding: $sec-padding;
