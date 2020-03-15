@@ -1,0 +1,24 @@
+{
+  "name": "personal-website",
+  "version": "2.0.0",
+  "description": "<small>**Version:** v2.0</small> # Personal Website",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/migmuni/personal-website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/migmuni/personal-website/issues"
+  },
+  "homepage": "https://github.com/migmuni/personal-website#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.10.0",
+    "gulp": "^4.0.2",
+    "tailwindcss": "^1.2.0"
+  }
+}
