@@ -5,6 +5,7 @@ var postcss = require('gulp-postcss');
 var tailwindcss = require('tailwindcss');
 var cssimport = require('postcss-import');
 var cssnested = require('postcss-nested');
+var purgecss = require('postcss-purgecss');
 var autoprefixer = require('autoprefixer');
 var cssnano = require('cssnano');
 
@@ -24,8 +25,8 @@ function styles(cb) {
 		cssimport(),
 		cssnested(),
 		tailwindcss(),
-		// autoprefixer(),
-		// cssnano(),
+		autoprefixer(),
+		cssnano(),
 	];
 	return src('./src/styles/main.css')
 		.pipe(postcss(plugins))
