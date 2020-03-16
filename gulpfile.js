@@ -11,15 +11,13 @@ var purgecss = require('postcss-purgecss');
 var autoprefixer = require('autoprefixer');
 var cssnano = require('cssnano');
 
-// Initializes browser sync and serves files
-function serve(cb) {
-	browserSync.init({
-		watch: true,
-		server: {
-			baseDir: "dist"
-		}
+// Builds the website using eleventy
+function eleventy(cb) {
+	exec('npx @11ty/eleventy --input=src --output=dist', function (err, stdout, stderr) {
+		console.log(stdout);
+		console.log(stderr);
+		cb(err);
 	});
-	cb();
 }
 
 // Builds all the styles using post-css
@@ -51,27 +49,32 @@ function media(cb) {
 	cb();
 }
 
-// Builds the website using eleventy
-function eleventy(cb) {
-	exec('npx @11ty/eleventy --input=src --output=dist', function (err, stdout, stderr) {
-		console.log(stdout);
-		console.log(stderr);
-		cb(err);
-	});
-}
-
 // Watches for changes and runs the appropriate task
-function compile(cb) {
+function develop(cb) {
 	watch('src/styles/**/*.css', styles);
 	watch('src/**/*.{html, md, 11ty.js, liquid, njk, hbs, mustache, ejs, haml, pug, jstl}', eleventy);
 	cb();
 }
 
-// Exporting tasks
+// Initializes browser sync and serves files
+function serve(cb) {
+	browserSync.init({
+		watch: true,
+		server: {
+			baseDir: "dist"
+		}
+	});
+	cb();
+}
+
+// Tasks
 exports.eleventy = eleventy;
-exports.serve = serve;
 exports.styles = styles;
 exports.scripts = scripts;
 exports.media = media;
-exports.compile = compile;
-exports.default = series(eleventy, styles, parallel(compile, serve));
+exports.develop = develop;
+exports.serve = serve;
+
+// Monotasks
+exports.build = series(eleventy, styles, scripts);
+exports.default = series(eleventy, styles, scripts, parallel(develop, serve));
