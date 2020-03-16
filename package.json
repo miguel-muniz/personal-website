@@ -20,6 +20,9 @@
     "@11ty/eleventy": "^0.10.0",
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
+    "gulp-postcss": "^8.0.0",
+    "postcss-import": "^12.0.1",
+    "postcss-nested": "^4.2.1",
     "tailwindcss": "^1.2.0"
   }
 }
