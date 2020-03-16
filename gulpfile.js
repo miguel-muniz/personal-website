@@ -2,9 +2,11 @@ var { src, dest, series } = require('gulp');
 var exec = require('child_process').exec;
 var browserSync = require('browser-sync').create();
 var postcss = require('gulp-postcss');
-var cssimport = require('postcss-import');
 var tailwindcss = require('tailwindcss');
+var cssimport = require('postcss-import');
 var cssnested = require('postcss-nested');
+var autoprefixer = require('autoprefixer');
+var cssnano = require('cssnano');
 
 // Initializes browser sync and serves files
 function serve(cb) {
@@ -20,10 +22,12 @@ function serve(cb) {
 function styles(cb) {
 	var plugins = [
 		cssimport(),
+		cssnested(),
 		tailwindcss(),
-		cssnested()
+		// autoprefixer(),
+		// cssnano(),
 	];
-	return src('./src/styles/*.css')
+	return src('./src/styles/main.css')
 		.pipe(postcss(plugins))
 		.pipe(dest('./dist/styles'));
 }

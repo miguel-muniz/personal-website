@@ -1,5 +1,5 @@
 @import 'normalize.css';
-@import 'santizie.css';
+@import 'sanitize.css';
 
 @tailwind base;
 @tailwind components;
