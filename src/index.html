@@ -11,12 +11,17 @@
 
 	<!-- Files -->
 	<link rel="stylesheet" href="styles/main.css">
+	<script src="https://kit.fontawesome.com/61623943c1.js" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
+	<script src="scripts/main.js"></script>
 
 </head>
 
 <body>
 
-	<p>Hello world! This is HTML5 Boilerplate.</p>
+<main x-data="{ dark = false }" :class="{ 'bg-key': dark === 'true' }">
+	<button @click="dark = !dark">Toggle Dark Mode</button>
+</main>
 
 
 </body>
