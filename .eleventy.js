@@ -6,6 +6,9 @@ module.exports = function (eleventyConfig) {
 			toml: toml.parse.bind(toml)
 		}
 	});
+	eleventyConfig.setTemplateFormats([
+		"yml"
+	]);
 	return {
 		dir: {
 			input: "src",
