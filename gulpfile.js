@@ -55,7 +55,7 @@ function media(cb) {
 // Watches for changes and runs the appropriate task
 function develop(cb) {
 	watch('src/styles/**/*.{css,scss}', { events: 'all' }, styles);
-	watch('src/**/*.{html,md,11ty.js,liquid,njk,hbs,mustache,ejs,haml,pug,jstl}', { events: 'all' }, series(eleventy, reload));
+	watch('src/**/*.{html,md,yml,11ty.js,liquid,njk,hbs,mustache,ejs,haml,pug,jstl}', { events: 'all' }, series(eleventy, reload));
 	cb();
 }
 

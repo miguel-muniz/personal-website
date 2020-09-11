@@ -7,7 +7,11 @@ module.exports = function (eleventyConfig) {
 		}
 	});
 	eleventyConfig.setTemplateFormats([
-		"yml"
+		"yml",
+		"png",
+		"jpg",
+		"jpeg",
+		"svg"
 	]);
 	return {
 		dir: {
