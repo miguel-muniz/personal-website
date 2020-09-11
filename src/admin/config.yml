@@ -1,6 +1,7 @@
 backend:
-  name: git-gateway
-  branch: v2-0
+  name: github
+  repo: migmuni/personal-website
+  branch: 'v2.0'
 media_folder: "src/media/uploads"
 public_folder: "dist/media/uploads"
 collections:
