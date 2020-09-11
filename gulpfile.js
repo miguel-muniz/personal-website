@@ -13,7 +13,7 @@ var cssnano = require('cssnano');
 
 // Builds the website using eleventy
 function eleventy(cb) {
-	exec('npx @11ty/eleventy', function (err, stdout, stderr) {
+	exec('npx @11ty/eleventy --input=src --output=dist', function (err, stdout, stderr) {
 		console.log(stdout);
 		console.log(stderr);
 		cb(err);
