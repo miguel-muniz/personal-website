@@ -1,0 +1,27 @@
+{{#if menu}}
+<nav aria-label="main"{{#if menu.class}} class="{{menu.class}}"{{/if}}>
+	{{#if menu.main}}
+	<ul>
+		{{#each menu.main}}
+		<li>
+			<a href="{{link}}">
+				<span><i class="fa fa-fw {{#if weight}}{{weight}} {{else}}fas {{/if}}{{icon}}"></i></span>
+				<span>{{title}}</span>
+			</a>
+		</li>
+		{{/each}}
+	</ul>
+	{{/if}}
+	{{#if menu.social}}
+	<ul>
+		{{#each menu.social}}
+		<li>
+			<a href="{{link}}" target="_blank" aria-label="{{title}}">
+				<span><i class="fa fa-fw {{#if weight}}{{weight}} {{else}}fab {{/if}}{{icon}}"></i></span>
+			</a>
+		</li>
+		{{/each}}
+	</ul>
+	{{/if}}
+</nav>
+{{/if}}

@@ -1,14 +1,14 @@
 module.exports = {
 	theme: {
-		screens: {
-			xxs: '240px',
-			xs: '480px',
-			sm: '640px',
-			md: '768px',
-			lg: '1024px',
-			xl: '1280px',
-			xxl: '1920px',
-		},
+		// screens: {
+		// 	xxs: '240px',
+		// 	xs: '480px',
+		// 	sm: '640px',
+		// 	md: '768px',
+		// 	lg: '1024px',
+		// 	xl: '1280px',
+		// 	xxl: '1920px',
+		// },
 		// Colorscheme: https://www.colorbox.io/#steps=10#hue_start=248#hue_end=232#hue_curve=easeOutSine#sat_start=0#sat_end=50#sat_curve=easeOutSine#sat_rate=120#lum_start=100#lum_end=10#lum_curve=easeOutSine#minor_steps_map=0
 		colors: {
 			transparent: 'transparent',

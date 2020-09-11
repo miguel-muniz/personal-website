@@ -13,23 +13,26 @@ var cssnano = require('cssnano');
 
 // Builds the website using eleventy
 function eleventy(cb) {
-	exec('npx @11ty/eleventy --input=src --output=dist', function (err, stdout, stderr) {
+	exec('npx @11ty/eleventy', function (err, stdout, stderr) {
 		console.log(stdout);
 		console.log(stderr);
 		cb(err);
 	});
 }
 
-// Builds all the styles using post-css
+// Builds all the styles using postcss
 function styles(cb) {
 	var plugins = [
 		cssimport(),
 		cssnested(),
 		tailwindcss(),
 		autoprefixer(),
+		// purgecss({
+		// 	content: ['./**/*.{html,hbs}']
+		// }),
 		cssnano(),
 	];
-	return src('./src/styles/main.css')
+	return src('./src/styles/main.{css,scss}')
 		.pipe(postcss(plugins))
 		.pipe(dest('./dist/styles'));
 	cb();
@@ -51,19 +54,26 @@ function media(cb) {
 
 // Watches for changes and runs the appropriate task
 function develop(cb) {
-	watch('src/styles/**/*.css', styles);
-	watch('src/**/*.{html, md, 11ty.js, liquid, njk, hbs, mustache, ejs, haml, pug, jstl}', eleventy);
+	watch('src/styles/**/*.{css,scss}', { events: 'all' }, styles);
+	watch('src/**/*.{html,md,11ty.js,liquid,njk,hbs,mustache,ejs,haml,pug,jstl}', { events: 'all' }, series(eleventy, reload));
 	cb();
 }
 
 // Initializes browser sync and serves files
 function serve(cb) {
 	browserSync.init({
+		directory: true,
 		watch: true,
 		server: {
 			baseDir: "dist"
 		}
 	});
+	cb();
+}
+
+// Reloads browser sync
+function reload(cb) {
+	browserSync.reload();
 	cb();
 }
 
@@ -76,5 +86,7 @@ exports.develop = develop;
 exports.serve = serve;
 
 // Monotasks
+// Build - Compiles all files
 exports.build = series(eleventy, styles, scripts);
+// Default - Compiles all files, watches for file changes, starts local server
 exports.default = series(eleventy, styles, scripts, parallel(develop, serve));
