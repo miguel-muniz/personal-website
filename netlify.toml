@@ -1,4 +1,4 @@
-[context.v2-0]
+[build]
 	base = ""
 	publish = "dist"
 	command = "gulp build"
