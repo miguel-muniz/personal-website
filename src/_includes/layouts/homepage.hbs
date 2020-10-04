@@ -1,25 +1,191 @@
 {{#> layouts/index}}
-	<header>
-		<img src="" alt="">
-		<div class="container mx-auto">
-			<img src="" alt="">
-			<h1>
-				<span>Miguel Muniz</span>
-				<span>Designer & Developer</span>
-			</h1>
-		</div>
-	</header>
-	<main id="main-content">
-		<div class="container mx-auto flex">
-			{{> components/menu}}
-			<div>
-				<section>
-					<h2>About</h2>
-					<p>Hello, I'm Miguel Muniz. A designer and developer focused on creating interfaces and systems. Born and raised in
-					Nebraska, I'm designing web applications and developing a pattern library at the University of Nebraska. With my curiosity,
-					knowledge, and persistence, it's my goal to find solutions, build products, and continuously grow.</p>
-				</section>
-			</div>
-		</div>
-	</main>
+<nav
+  style="
+    backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.875);
+  "
+  class="fixed top-0 left-0 w-full border-b border-gray-100"
+>
+  <div class="max-w-3xl mx-auto px-4 py-3 flex items-center space-x-5">
+    <!-- START logo -->
+    <div class="mr-auto"><div class="w-6 h-6 bg-gray-700"></div></div>
+    <!-- END logo -->
+    <!-- START desktop nav -->
+    <div class="hidden md:flex items-center space-x-5">
+      <!-- START nav links -->
+      <div>
+        <ul class="flex space-x-2">
+          <li>
+            <a
+              href="/home"
+              class="flex space-x-3 transition duration-500 ease-in-out hover:bg-gray-100 active:bg-gray-200 px-4 py-2 rounded"
+              ><span class="text-gray-700"
+                ><i
+                  class="fas fa-fw fa-home-alt"
+                  data-fa-transform="grow-1"
+                ></i></span
+              ><span class="text-gray-800">Home</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="/projects"
+              class="flex space-x-3 transition duration-500 ease-in-out hover:bg-gray-100 active:bg-gray-200 px-4 py-2 rounded"
+              ><span class="text-gray-700"
+                ><i class="far fa-fw fa-pencil-ruler"></i></span
+              ><span class="text-gray-800">Projects</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="/posts"
+              class="flex space-x-3 transition duration-500 ease-in-out hover:bg-gray-100 active:bg-gray-200 px-4 py-2 rounded"
+              ><span class="text-gray-700"
+                ><i
+                  class="far fa-fw fa-comment-alt-lines"
+                  data-fa-transform="shrink-1"
+                ></i></span
+              ><span class="text-gray-800">Posts</span></a
+            >
+          </li>
+        </ul>
+      </div>
+      <!-- END nav links -->
+      <!-- START color scheme -->
+      <div class="flex space-x-4">
+        <button
+          class="flex space-x-2 transition duration-500 ease-in-out hover:bg-gray-100 active:bg-gray-200 px-3 py-2 rounded"
+          type="button"
+          data-tippy-content="Current Color Scheme: Light"
+        >
+          <span class="text-gray-700"
+            ><i class="far fa-fw fa-sun-cloud"></i
+          ></span>
+        </button>
+        <button
+          class="space-x-2 transition duration-500 ease-in-out hover:bg-gray-100 active:bg-gray-200 px-3 py-2 rounded hidden"
+          type="button"
+          data-tippy-content="Current Color Scheme: Dark"
+        >
+          <span class="text-gray-700"
+            ><i class="far fa-fw fa-moon-cloud"></i
+          ></span>
+        </button>
+        <button
+          class="space-x-2 transition duration-500 ease-in-out hover:bg-gray-100 active:bg-gray-200 px-3 py-2 rounded hidden"
+          type="button"
+          data-tippy-content="Current Color Scheme: System Default"
+        >
+          <span class="text-gray-700"
+            ><i class="far fa-fw fa-cog" data-fa-transform="shrink-1"></i
+          ></span>
+        </button>
+      </div>
+      <!-- END color scheme -->
+    </div>
+    <!-- END desktop nav -->
+    <!-- START mobile nav -->
+    <div class="flex space-x-4 md:hidden">
+      <button
+        class="flex space-x-2 transition duration-500 ease-in-out hover:bg-gray-100 active:bg-gray-200 px-3 py-2 rounded"
+        type="button"
+        data-tippy-content="Menu"
+      >
+        <span class="text-gray-700"
+          ><i class="far fa-fw fa-ellipsis-v"></i
+        ></span>
+      </button>
+    </div>
+  </div>
+</nav>
+<header>
+  <div class="min-h-50 bg-gray-100"></div>
+  <div class="max-w-3xl mx-auto px-4 py-24">
+    <div class="h-20 w-20 bg-gray-700"></div>
+    <h1 class="flex flex-col space-y-1">
+      <span class="text-5xl">Miguel Muniz</span>
+      <span class="text-3xl">Designer & Developer</span>
+    </h1>
+  </div>
+</header>
+<main id="main-content">
+  <div class="max-w-3xl mx-auto px-4">
+    <section class="py-12">
+      <h2 class="text-3xl">About</h2>
+      <p>
+        Hello, I'm Miguel Muniz. A designer and developer focused on creating
+        interfaces and systems. Born and raised in Nebraska, I'm designing web
+        applications and developing a pattern library at the University of
+        Nebraska. With my curiosity, knowledge, and persistence, it's my goal to
+        find solutions, build products, and continuously grow.
+      </p>
+      <div>
+        <ul class="flex space-x-2">
+          <li>
+            <a
+              href="https://www.linkedin.com/in/miguel-muniz/"
+              class="text-gray-700 hover:text-gray-500 transition duration-500 ease-in-out active:text-gray-600"
+              ><span><i class="fab fa-fw fa-lg fa-linkedin-in"></i></span
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/migmuni"
+              class="text-gray-700 hover:text-gray-500 transition duration-500 ease-in-out active:text-gray-600"
+              ><span><i class="fab fa-fw fa-lg fa-github"></i></span
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://www.figma.com/@migmuni"
+              class="text-gray-700 hover:text-gray-500 transition duration-500 ease-in-out active:text-gray-600"
+              ><span
+                ><i
+                  class="fab fa-fw fa-lg fa-figma"
+                  data-fa-transform="shrink-1"
+                ></i></span
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="py-12">
+      <h2 class="text-3xl">Experience</h2>
+      <h3>University of Nebraska</h3>
+      <p>Web Designer & Developer</p>
+      <p>Oct 2018 - Current</p>
+      <h4>Responsibilities</h4>
+      <p>
+        Worked with other designers and back end developers to design and
+        develop a design system used by the University of Nebraska's Online High
+        School.
+      </p>
+      <details>
+        <summary>More information</summary>
+        <ul>
+          <li>
+            Collaborated with designers, developers, and product owners to plan
+            future work
+          </li>
+          <li>
+            Documented user story details, acceptance criteria, and testing
+            requirements
+          </li>
+          <li>
+            Developed front-end in compliance with standardized coding
+            principles and best practices
+          </li>
+          <li>Met with back-end developers to discuss feature hand-off</li>
+          <li>
+            Continuously tested and preformed quality assurance on front-end and
+            implemented features
+          </li>
+          <li>
+            Maintained front-end prototypes and pattern library documentation
+          </li>
+        </ul>
+      </details>
+    </section>
+  </div>
+</main>
 {{/layouts/index}}
