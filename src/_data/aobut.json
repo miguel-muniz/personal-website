@@ -1,0 +1,22 @@
+{
+    "about": {
+        "summary": "Hello, I'm Miguel Muniz. A designer and developer focused on creating interfaces and systems. Born and raised in Nebraska, I'm designing web applications and developing a pattern library at the University of Nebraska. With my curiosity, knowledge, and persistence, it's my goal to find solutions, build products, and continuously grow.",
+        "social": [
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/miguel-muniz/",
+                "icon": "linkedin-in"
+            },
+            {
+                "name": "GitHub",
+                "url": "https://github.com/migmuni",
+                "icon": "github"
+            },
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/migmuni",
+                "icon": "twitter"
+            }
+        ]
+    }
+}
