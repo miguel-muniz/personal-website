@@ -1,4 +1,4 @@
 tippy('[data-tippy-content]', {
-  delay: 500,
-  duration: 500,
+    delay: 500,
+    duration: 500,
 });

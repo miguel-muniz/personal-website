@@ -1,0 +1,123 @@
+{% extends "layouts/boilerplate.njk" %}
+{% from "components/button.njk" import button %}
+
+{% block body %}
+
+    <nav style="
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+        background-color: rgba(255, 255, 255, 0.875);
+    " class="fixed top-0 left-0 w-full border-b border-gray-100">
+        <div class="max-w-3xl mx-auto px-4 py-3 flex items-center space-x-5">
+            <!-- START logo -->
+            <div class="mr-auto">
+                <div class="w-6 h-6 bg-gray-700"></div>
+            </div>
+            <!-- END logo -->
+            <!-- START desktop nav -->
+            <div class="hidden md:flex items-center space-x-5">
+                <!-- START nav links -->
+                <div>
+                    <ul class="flex space-x-2">
+                        <li>
+                            {{ button(text = 'Example', href = '/', style = 'plain', leadingIcon = 'home-alt', leadingIconStyle = 'fas') }}
+                        </li>
+                        <li>
+                            {{ button(text = 'Projects', href = '/projects', style = 'plain', leadingIcon = 'pencil-ruler') }}
+                        </li>
+                        <li>
+                            {{ button(text = 'Posts', href = '/posts', style = 'plain', leadingIcon = 'comment-alt-lines') }}
+                        </li>
+                    </ul>
+                </div>
+                <!-- END nav links -->
+                <!-- START color scheme -->
+                <div class="flex space-x-4">
+                    {{ button(style = 'plain', leadingIcon = 'sun-cloud', tooltip='Current Color Scheme: Light') }}
+                </div>
+                <!-- END color scheme -->
+            </div>
+            <!-- END desktop nav -->
+            <!-- START mobile nav -->
+            <div class="flex space-x-4 md:hidden">
+                <button class="flex space-x-2 transition duration-500 ease-in-out hover:bg-gray-100 active:bg-gray-200 px-3 py-2 rounded" type="button" data-tippy-content="Menu">
+                    <span class="text-gray-700">
+                        <i class="far fa-fw fa-ellipsis-v"></i>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <div class="min-h-50 bg-gray-100"></div>
+        <div class="max-w-3xl mx-auto px-4 py-24">
+            <div class="h-20 w-20 bg-gray-700"></div>
+            <h1 class="flex flex-col space-y-1">
+                <span class="text-5xl">Miguel Muniz</span>
+                <span class="text-3xl">Designer & Developer</span>
+            </h1>
+        </div>
+    </header>
+    <main id="main-content">
+        <div class="max-w-3xl mx-auto px-4">
+            <section class="py-12">
+                <h2 class="text-3xl">About</h2>
+                <p>
+                    Hello, I'm Miguel Muniz. A designer and developer focused on creating interfaces and systems. Born and raised in Nebraska, I'm designing web applications and developing a pattern library at the University of Nebraska. With my curiosity, knowledge, and persistence, it's my goal to find solutions, build products, and continuously grow.
+                </p>
+                <div>
+                    <ul class="flex space-x-2">
+                        <li>
+                            <a href="https://www.linkedin.com/in/miguel-muniz/" class="text-gray-700 hover:text-gray-500 transition duration-500 ease-in-out active:text-gray-600">
+                                <span>
+                                    <i class="fab fa-fw fa-lg fa-linkedin-in"></i></span ></a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/migmuni" class="text-gray-700 hover:text-gray-500 transition duration-500 ease-in-out active:text-gray-600">
+                                <span>
+                                    <i class="fab fa-fw fa-lg fa-github"></i></span ></a>
+                        </li>
+                        <li>
+                            <a href="https://www.figma.com/@migmuni" class="text-gray-700 hover:text-gray-500 transition duration-500 ease-in-out active:text-gray-600">
+                                <span>
+                                    <i class="fab fa-fw fa-lg fa-figma" data-fa-transform="shrink-1"></i></span ></a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="py-12">
+                <h2 class="text-3xl">Experience</h2>
+                <h3>University of Nebraska</h3>
+                <p>Web Designer & Developer</p>
+                <p>Oct 2018 - Current</p>
+                <h4>Responsibilities</h4>
+                <p>
+                    Worked with other designers and back end developers to design and develop a design system used by the University of Nebraska's Online High School.
+                </p>
+                <details>
+                    <summary>More information</summary>
+                    <ul>
+                        <li>
+                            Collaborated with designers, developers, and product owners to plan future work
+                        </li>
+                        <li>
+                            Documented user story details, acceptance criteria, and testing requirements
+                        </li>
+                        <li>
+                            Developed front-end in compliance with standardized coding principles and best practices
+                        </li>
+                        <li>
+                            Met with back-end developers to discuss feature hand-off
+                        </li>
+                        <li>
+                            Continuously tested and preformed quality assurance on front-end and implemented features
+                        </li>
+                        <li>
+                            Maintained front-end prototypes and pattern library documentation
+                        </li>
+                    </ul>
+                </details>
+            </section>
+        </div>
+    </main>
+{% endblock %}
