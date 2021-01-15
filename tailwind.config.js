@@ -32,4 +32,5 @@ module.exports = {
         backgroundColor: ['responsive', 'hover', 'focus', 'active'],
         position: ['responsive', 'focus'],
     },
+    darkmode: 'class',
 }
