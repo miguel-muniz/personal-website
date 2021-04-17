@@ -1,5 +1,4 @@
-<small>**Version:** v2.0</small>
-# Personal Website
+# Personal Website <small style="font-size: 50%;">`v2.0`</small>
 
 My personal website, https://miguel-muniz.com/, showcases my own personal work, career, and skills. It also serves as a platform to experiment and publish written content.
 
