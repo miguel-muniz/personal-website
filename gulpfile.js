@@ -4,7 +4,6 @@ var browserSync = require('browser-sync').create();
 var babel = require('gulp-babel');
 var uglify = require('gulp-uglify');
 var postcss = require('gulp-postcss');
-var tailwindcss = require('tailwindcss');
 var cssimport = require('postcss-import');
 var cssnested = require('postcss-nested');
 var purgecss = require('postcss-purgecss');
@@ -25,7 +24,6 @@ function styles(cb) {
     var plugins = [
         cssimport(),
         cssnested(),
-        tailwindcss(),
         autoprefixer(),
         // purgecss({
         // 	content: ['./**/*.{html,hbs}']
@@ -55,7 +53,6 @@ function media(cb) {
 // Watches for changes and runs the appropriate task
 function develop(cb) {
     watch('src/styles/**/*.{css,scss}', { events: 'all' }, styles);
-    watch('tailwind.config.js', { events: 'all' }, styles);
     watch('src/scripts/**/*.{js}', { events: 'all' }, scripts);
     watch('src/**/*.{html,md,yml,11ty.js,liquid,njk,hbs,mustache,ejs,haml,pug,jstl}', { events: 'all' }, series(eleventy, reload));
     cb();
