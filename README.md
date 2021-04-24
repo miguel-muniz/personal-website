@@ -14,7 +14,7 @@ I am not accepting contributions at this time
 4. A development server will be started and the website will load in your default browser
 
 ## Releasing
-1. Commits to `v2.0` are automatically built and released to https://v2-0.miguel-muniz.com/
+1. Commits to `v2.0` are automatically built and released to https://beta.miguel-muniz.com/
 
 ## Status
 <code><b>Version</b> 2.0</code>
