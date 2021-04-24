@@ -1,4 +1,8 @@
 module.exports = function (eleventyConfig) {
+    eleventyConfig.setFrontMatterParsingOptions({
+        excerpt: true,
+        excerpt_separator: "---"
+    });
     eleventyConfig.setTemplateFormats([
         "yml",
         "png",
@@ -10,6 +14,7 @@ module.exports = function (eleventyConfig) {
         dir: {
             input: "src",
             output: "dist",
+            includes: "_includes",
             layouts: "_includes/layouts"
         }
     };

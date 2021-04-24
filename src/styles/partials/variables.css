@@ -1,0 +1,17 @@
+:root {
+    --font-brand: "Varela Round", sans-serif;
+    --font-body: "Catamaran", sans-serif;
+
+    --color-white: #fff;
+    --color-black: #000;
+
+    --color-brand-10: #e1e1f9;
+    --color-brand-20: #c4c7f4;
+    --color-brand-30: #9ca0dd;
+    --color-brand-40: #787bbe;
+    --color-brand-50: #4b5094;
+    --color-brand-60: #363b7f;
+    --color-brand-70: #25286b;
+    --color-brand-80: #181a55;
+    --color-brand-90: #0f1048;
+}

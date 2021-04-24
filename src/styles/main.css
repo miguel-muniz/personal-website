@@ -1,5 +1,8 @@
-/*---------------------------------------------------------------------------*\
+/* Prsonal Website - Copyright Miguel Muniz */
 
-  #ICONIC
+@import "partials/variables.css";
 
-\*---------------------------------------------------------------------------*/
+@import "partials/normalize.css";
+@import "partials/base.css";
+
+@import "layouts/homepage.css";
