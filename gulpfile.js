@@ -1,6 +1,7 @@
-var { src, dest, series, parallel, task, watch } = require('gulp');
+var { src, dest, series, parallel, watch } = require('gulp');
 var exec = require('child_process').exec;
 var browserSync = require('browser-sync').create();
+var imagemin = require('gulp-imagemin');
 var babel = require('gulp-babel');
 var uglify = require('gulp-uglify');
 var postcss = require('gulp-postcss');
@@ -47,6 +48,9 @@ function scripts(cb) {
 
 // Optimizes and copies over all media
 function media(cb) {
+    return src('src/images/**/*')
+        .pipe(imagemin())
+        .pipe(dest('dist/images/'));
     cb();
 }
 
@@ -55,6 +59,7 @@ function develop(cb) {
     watch('src/styles/**/*.{css,scss}', { events: 'all' }, styles);
     watch('src/scripts/**/*.{js}', { events: 'all' }, scripts);
     watch('src/**/*.{html,md,yml,11ty.js,liquid,njk,hbs,mustache,ejs,haml,pug,jstl}', { events: 'all' }, series(eleventy, reload));
+    watch('src/images/**/*', { events: 'all' }, series(media));
     cb();
 }
 
@@ -86,6 +91,6 @@ exports.serve = serve;
 
 // Monotasks
 // Build - Compiles all files
-exports.build = series(eleventy, styles, scripts);
+exports.build = series(eleventy, styles, scripts, media);
 // Default - Compiles all files, watches for file changes, starts local server
-exports.default = series(eleventy, styles, scripts, parallel(develop, serve));
+exports.default = series(eleventy, styles, scripts, media, parallel(develop, serve));
