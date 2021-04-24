@@ -4,8 +4,6 @@ My personal website, https://miguel-muniz.com/, showcases my own personal work, 
 
 It is currently in the process of an overhaul, as my old website has served its purpose but is in dire need of an update to reflect all the knowledge I have gained now that I am years into my career.
 
-<br>
-
 ## Contributing
 I am not accepting contributions at this time
 
@@ -17,8 +15,6 @@ I am not accepting contributions at this time
 
 ## Releasing
 1. Commits to `v2.0` are automatically built and released to https://v2-0.miguel-muniz.com/
-
-<br>
 
 ## Status
 <code><b>Version</b> 2.0</code>
