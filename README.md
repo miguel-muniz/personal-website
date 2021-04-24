@@ -4,6 +4,13 @@ My personal website, https://miguel-muniz.com/, showcases my own personal work, 
 
 It is currently in the process of an overhaul, as my old website has served its purpose but is in dire need of an update to reflect all the knowledge I have gained now that I am years into my career.
 
+## Todo
+- [ ] Refactor hero into a component
+- [ ] Clean up CSS
+- [ ] Change from PostCSS to SASS
+- [ ] Add minification
+
+
 ## Contributing
 I am not accepting contributions at this time
 
