@@ -1,0 +1,146 @@
+/*=============================================================================
+    COMPONENT
+    Hero Pattern
+=============================================================================*/
+
+/*  Utilities
+=============================================================================*/
+@keyframes wipe-in-down {
+    from {
+        clip-path: inset(0 0 100% 0);
+    }
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+@keyframes bs-transition {
+    from {
+        fill: var(--color-brand-30);
+    }
+
+    to {
+        fill: var(--color-brand-40);
+    }
+}
+
+@keyframes fs-transition {
+    from {
+        fill: var(--color-brand-40);
+    }
+
+    to {
+        fill: var(--color-brand-20);
+    }
+}
+
+@keyframes bi-transition {
+    from {
+        fill: var(--color-brand-50);
+    }
+
+    to {
+        fill: var(--color-brand-70);
+    }
+}
+
+@keyframes fi-transition {
+    from {
+        fill: var(--color-brand-60);
+    }
+
+    to {
+        fill: var(--color-brand-40);
+    }
+}
+
+@keyframes s-sparkle {
+    from {
+        fill: var(--color-brand-20);
+    }
+
+    to {
+        fill: var(--color-brand-40);
+    }
+}
+
+@keyframes i-sparkle {
+    from {
+        fill: var(--color-brand-40);
+    }
+
+    to {
+        fill: var(--color-brand-70);
+    }
+}
+
+/*  General
+=============================================================================*/
+.hero_pattern {
+    padding-bottom: 3rem;
+
+    .hero_pattern-image {
+        height: 75vh;
+        overflow: hidden;
+        position: relative;
+        animation: wipe-in-down 1.5s cubic-bezier(0.75, 0, 0.15, 1) both;
+        backface-visibility: hidden;
+        perspective: 1000;
+
+        svg {
+            position: absolute;
+            bottom: 0;
+            min-width: 1920px;
+
+            .background-shapes {
+                animation: bs-transition 1.25s ease-in-out 3s 1 forwards,
+                    s-sparkle 2.5s ease-in-out 4.25s infinite alternate-reverse;
+            }
+
+            .foreground-shapes {
+                animation: fs-transition 1.25s ease-in-out 3s 1 forwards,
+                    s-sparkle 2.5s ease-in-out 4.25s infinite alternate;
+            }
+
+            .background-icons {
+                animation: bi-transition 1.25s ease-in-out 3s 1 forwards,
+                    i-sparkle 2.5s ease-in-out 4.25s infinite alternate-reverse;
+            }
+
+            .foreground-icons {
+                animation: fi-transition 1.25s ease-in-out 3s 1 forwards,
+                    i-sparkle 2.5s ease-in-out 4.25s infinite alternate;
+            }
+        }
+    }
+
+    .hero_pattern-content,
+    & ~ section {
+        animation: wipe-in-down 1.5s cubic-bezier(0.75, 0, 0.15, 1) 1.5s both;
+    }
+
+    .hero_pattern-content {
+        padding-top: 6rem;
+    }
+
+    .hero_pattern-headline {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero_pattern-logo {
+        max-width: 4.25rem;
+    }
+
+    .hero_pattern-name {
+        font-family: var(--font-brand);
+        color: var(--color-brand-60);
+        font-size: var(--font-size-70);
+    }
+
+    .hero_pattern-title {
+        font-size: 75%;
+        font-weight: normal;
+        font-size: var(--font-size-60);
+    }
+}

@@ -4,12 +4,8 @@ var browserSync = require('browser-sync').create();
 var imagemin = require('gulp-imagemin');
 var babel = require('gulp-babel');
 var uglify = require('gulp-uglify');
-var postcss = require('gulp-postcss');
-var cssimport = require('postcss-import');
-var cssnested = require('postcss-nested');
+var sass = require('gulp-sass');
 var purgecss = require('postcss-purgecss');
-var autoprefixer = require('autoprefixer');
-var cssnano = require('cssnano');
 
 // Builds the website using eleventy
 function eleventy(cb) {
@@ -20,19 +16,10 @@ function eleventy(cb) {
     });
 }
 
-// Builds all the styles using postcss
+// Builds all the styles using gulp-sass
 function styles(cb) {
-    var plugins = [
-        cssimport(),
-        cssnested(),
-        autoprefixer(),
-        // purgecss({
-        // 	content: ['./**/*.{html,hbs}']
-        // }),
-        cssnano(),
-    ];
-    return src('./src/styles/main.{css,scss}')
-        .pipe(postcss(plugins))
+    return src('./src/styles/main.scss')
+        .pipe(sass().on('error', sass.logError))
         .pipe(dest('./dist/styles'));
     cb();
 }

@@ -3,19 +3,14 @@ title: "Home"
 ---
 
 {{#> partials/boilerplate }}
-    <!-- Hero -->
-    <header class="hero">
-        <div class="hero-image" role="img" aria-label="Colorful pattern of icons">
-            {{> partials/pattern }}
-        </div>
-        <div class="hero-content wrapper">
-            <div class="hero-logo" role="img" aria-label="Miguel Muniz's monogram logo">
-                {{> partials/logo}}
-            </div>
-            <h1 class="hero-headline">
-                <span class="hero-name">Miguel Muniz</span>
-                <span class="hero-title">Designer & Developer</span>
-            </h1>
-        </div>
-    </header>
+    {{> components/hero-pattern
+        title=about.name
+        subtitle=about.title
+    }}
+
+    {{> components/introduction
+        title=about.introduction
+        description=about.summary
+    }}
+
     {{/partials/boilerplate}}
