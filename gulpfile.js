@@ -5,7 +5,6 @@ var imagemin = require('gulp-imagemin');
 var babel = require('gulp-babel');
 var uglify = require('gulp-uglify');
 var sass = require('gulp-sass');
-var purgecss = require('postcss-purgecss');
 
 // Builds the website using eleventy
 function eleventy(cb) {

@@ -3,25 +3,106 @@
         <clipPath id="a">
             <path d="M0 1080V0h1920v1080" class="a" />
         </clipPath>
+
         <style>
             .a {
                 fill: none
             }
 
             .background-shapes {
-                fill: #9ca0dd
+                fill: #9ca0dd;
             }
 
             .foreground-shapes {
-                fill: #787bbe
+                fill: #787bbe;
             }
 
             .background-icons {
-                fill: #4b5094
+                fill: #4b5094;
             }
 
             .foreground-icons {
-                fill: #363b7f
+                fill: #363b7f;
+            }
+
+            @keyframes bs-transition {
+                from {
+                    fill: var(--color-brand-30);
+                }
+
+                to {
+                    fill: var(--color-brand-40);
+                }
+            }
+
+            @keyframes fs-transition {
+                from {
+                    fill: var(--color-brand-40);
+                }
+
+                to {
+                    fill: var(--color-brand-20);
+                }
+            }
+
+            @keyframes bi-transition {
+                from {
+                    fill: var(--color-brand-50);
+                }
+
+                to {
+                    fill: var(--color-brand-70);
+                }
+            }
+
+            @keyframes fi-transition {
+                from {
+                    fill: var(--color-brand-60);
+                }
+
+                to {
+                    fill: var(--color-brand-40);
+                }
+            }
+
+            @keyframes s-sparkle {
+                from {
+                    fill: var(--color-brand-20);
+                }
+
+                to {
+                    fill: var(--color-brand-40);
+                }
+            }
+
+            @keyframes i-sparkle {
+                from {
+                    fill: var(--color-brand-40);
+                }
+
+                to {
+                    fill: var(--color-brand-70);
+                }
+            }
+
+            .background-shapes {
+                animation: bs-transition 1.25s ease-in-out 3s 1 forwards,
+                    s-sparkle 2.5s ease-in-out 4.25s infinite alternate-reverse;
+            }
+
+            .foreground-shapes {
+                animation: fs-transition 1.25s ease-in-out 3s 1 forwards,
+                    s-sparkle 2.5s ease-in-out 4.25s infinite alternate;
+            }
+
+            .background-icons {
+                animation: bi-transition 1.25s ease-in-out 3s 1 forwards,
+                    i-sparkle 2.5s ease-in-out 4.25s infinite alternate-reverse;
+            }
+
+            .foreground-icons {
+                animation: fi-transition 1.25s ease-in-out 3s 1 forwards,
+                    i-sparkle 2.5s ease-in-out 4.25s infinite alternate;
             }
         </style>
     </defs>
