@@ -33,6 +33,10 @@
             bottom: 0;
             min-width: 1920px;
         }
+
+        @media only screen and (max-width: 480px) {
+            height: 62.5vh;
+        }
     }
 
     .hero_pattern-content,
