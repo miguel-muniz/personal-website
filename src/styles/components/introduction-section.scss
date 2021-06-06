@@ -5,6 +5,17 @@
 
 /*  General
 =============================================================================*/
-.introduction {
+.ic-intro_section {
     padding: 6rem 0;
+
+    .ic-intro_section-list {
+        padding-left: 0;
+        display: flex;
+    }
+
+    .ic-intro_section-item {
+        &:not(:first-child) {
+            margin-left: .5rem;
+        }
+    }
 }

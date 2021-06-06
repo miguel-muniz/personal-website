@@ -18,6 +18,7 @@ body {
     line-height: 1.5;
     font-size: 16px;
     font-family: var(--font-body);
+    color: var(--color-brand-90);
 }
 
 body,
@@ -57,54 +58,4 @@ picture {
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
     }
-}
-
-.wrapper {
-    padding: 0 1rem;
-    max-width: 48rem;
-    margin: 0 auto;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: var(--color-brand-90);
-}
-
-h1 {
-    font-size: var(--font-size-90);
-    line-height: 1.25;
-}
-
-h2 {
-    font-size: var(--font-size-80);
-    line-height: 1.25;
-}
-
-h3 {
-    font-size: var(--font-size-70);
-    line-height: 1.25;
-}
-
-h4 {
-    font-size: var(--font-size-60);
-    line-height: 1.375;
-}
-
-h5 {
-    font-size: var(--font-size-50);
-    line-height: 1.375;
-}
-
-h6 {
-    font-size: var(--font-size-40);
-    line-height: 1.375;
-}
-
-p {
-    font-size: var(--font-size-30);
-    line-height: 1.5;
 }

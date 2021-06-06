@@ -4,9 +4,12 @@
 
 @import "partials/variables";
 @import "partials/normalize";
-@import "partials/base";
 
-@import "components/hero-pattern.scss";
-@import "components/introduction.scss";
+@import "partials/base";
+@import "partials/layout";
+@import "partials/typography";
 
 @import "layouts/homepage";
+
+@import "components/hero-pattern.scss";
+@import "components/introduction-section.scss";

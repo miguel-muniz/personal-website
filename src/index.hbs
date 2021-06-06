@@ -2,15 +2,15 @@
 title: "Home"
 ---
 
-{{#> partials/boilerplate }}
+{{#> layouts/homepage }}
     {{> components/hero-pattern
         title=about.name
         subtitle=about.title
     }}
 
-    {{> components/introduction
+    {{> components/introduction-section
         title=about.introduction
         description=about.summary
     }}
 
-    {{/partials/boilerplate}}
+    {{/layouts/homepage}}
