@@ -58,6 +58,10 @@
             list-style: none;
             transition: all 0.25s ease-in-out;
 
+            &::marker {
+                display: none;
+            }
+
             .ic-icon {
                 margin-left: 0.125rem;
             }
