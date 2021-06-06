@@ -5,6 +5,7 @@ h4,
 h5,
 h6 {
     color: var(--color-brand-60);
+    margin-top: 0;
     margin-bottom: .5rem;
 }
 
@@ -41,6 +42,7 @@ h6 {
 p {
     font-size: var(--font-size-30);
     line-height: 1.5;
+    margin-bottom: 1rem;
 }
 
 a {
