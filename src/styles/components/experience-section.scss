@@ -58,6 +58,10 @@
             list-style: none;
             transition: all 0.25s ease-in-out;
 
+            &:before {
+                content: "More";
+            }
+
             &::marker,
             &::-webkit-details-marker {
                 display: none;
@@ -72,7 +76,7 @@
             }
 
             &:hover,
-            &:focus {
+            &:focus-visible {
                 cursor: pointer;
                 color: var(--color-brand-30);
             }
@@ -83,8 +87,12 @@
         }
 
         &[open] {
+            summary:before {
+                content: "Less";
+            }
+
             summary i {
-                transform: rotate(180deg) translateY(1px);
+                transform: rotate(180deg) translateY(2px);
             }
         }
 
