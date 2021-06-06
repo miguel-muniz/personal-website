@@ -58,7 +58,8 @@
             list-style: none;
             transition: all 0.25s ease-in-out;
 
-            &::marker {
+            &::marker,
+            &::-webkit-details-marker {
                 display: none;
             }
 
