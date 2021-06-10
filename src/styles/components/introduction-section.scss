@@ -6,7 +6,11 @@
 /*  General
 =============================================================================*/
 .ic-intro_section {
-    padding: 3rem 0;
+    padding: 1.5rem 0;
+
+    @media screen and (min-width: $breakpoint-md) {
+        padding: 3rem 0;
+    }
 
     .ic-intro_section-list {
         padding-left: 0;
@@ -15,7 +19,7 @@
 
     .ic-intro_section-item {
         &:not(:first-child) {
-            margin-left: .5rem;
+            margin-left: 0.5rem;
         }
     }
 }

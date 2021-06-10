@@ -6,7 +6,7 @@ h5,
 h6 {
     color: var(--color-brand-60);
     margin-top: 0;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
 }
 
 h1 {
@@ -46,14 +46,15 @@ p {
 }
 
 a {
-    color: var(--color-brand-50);
-    transition: all ease-in-out .25s;
+    color: var(--color-brand-40);
+    transition: all ease-in-out 0.25s;
 
-    &:hover, &:focus {
-        color: var(--color-brand-40);
+    &:hover,
+    &:focus {
+        color: var(--color-brand-30);
     }
 
     &:active {
-        color: var(--color-brand-30);
+        color: var(--color-brand-20);
     }
 }

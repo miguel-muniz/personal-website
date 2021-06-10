@@ -1,5 +1,9 @@
 .ic-experience_section {
-    padding: 3rem 0;
+    padding: 1.5rem 0;
+
+    @media screen and (min-width: $breakpoint-md) {
+        padding: 3rem 0;
+    }
 
     .ic-experience_section-title {
         margin-bottom: 1rem;
@@ -13,6 +17,10 @@
 
         & + * {
             padding-top: 3rem;
+        }
+
+        &:not(:first-of-type) .ic-experience_section-marker {
+            background-color: var(--color-brand-30);
         }
     }
 
