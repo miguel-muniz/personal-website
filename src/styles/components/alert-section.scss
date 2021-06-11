@@ -1,0 +1,28 @@
+.ic-alert_section {
+    padding: 1.5rem 0;
+
+    .ic-alert_section-item {
+        border: 2px solid var(--color-brand-20);
+        border-radius: 4px;
+        padding: 1.5rem 1.25rem;
+        display: flex;
+        gap: 1rem;
+        // box-shadow: 0 2px 8px 0px rgba(2, 6, 61, 0.125);
+
+        .ic-icon {
+            color: var(--color-brand-40);
+        }
+
+        .ic-alert_section-message {
+            margin-top: -0.125rem;
+        }
+
+        h3 {
+            font-size: var(--font-size-40);
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

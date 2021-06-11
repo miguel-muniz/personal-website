@@ -28,7 +28,7 @@
         height: 75vh;
         overflow: hidden;
         position: relative;
-        animation: wipe-in-down 1.5s cubic-bezier(0.75, 0, 0.15, 1) both;
+        // animation: wipe-in-down 1.5s cubic-bezier(0.75, 0, 0.15, 1) both;
         backface-visibility: hidden;
         perspective: 1000;
 
@@ -45,7 +45,7 @@
 
     .ic-hero_pattern-content,
     & ~ section {
-        animation: wipe-in-down 1.5s cubic-bezier(0.75, 0, 0.15, 1) 1.5s both;
+        // animation: wipe-in-down 1.5s cubic-bezier(0.75, 0, 0.15, 1) 1.5s both;
     }
 
     .ic-hero_pattern-content {
