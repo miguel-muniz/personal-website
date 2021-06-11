@@ -1,0 +1,43 @@
+{
+    "skills": [
+        {
+            "proficient": [
+                "Adobe Photoshop / Illustrator",
+                "Branding Design",
+                "Cross Browser Testing",
+                "CSS",
+                "Figma",
+                "Git",
+                "Gulp",
+                "HTML Templating",
+                "HTML",
+                "Icon Design",
+                "Image Optimization",
+                "Invision",
+                "SCSS",
+                "Sketch",
+                "Terminal",
+                "UI/UX Design",
+                "VSCode"
+            ],
+            "knowledgable": [
+                "CSS Frameworks",
+                "Design Systems",
+                "Illustration",
+                "Javascript",
+                "Photography",
+                "Print Design",
+                "React",
+                "SVG"
+            ],
+            "related": [
+                "Agile/Scrum Project Management",
+                "Comprehensive Quality Assurance",
+                "Effective Self Organization",
+                "Extensive Client Research",
+                "Intuitive Problem Solving",
+                "Self-Motivated Learner"
+            ]
+        }
+    ]
+}

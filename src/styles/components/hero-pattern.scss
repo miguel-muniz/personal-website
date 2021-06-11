@@ -1,0 +1,80 @@
+/*=============================================================================
+    COMPONENT
+    Hero Pattern
+=============================================================================*/
+
+/*  Utilities
+=============================================================================*/
+@keyframes wipe-in-down {
+    from {
+        clip-path: inset(0 0 100% 0);
+    }
+
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+/*  General
+=============================================================================*/
+.ic-hero_pattern {
+    padding-bottom: 2.25rem;
+
+    @media screen and (min-width: $breakpoint-md) {
+        padding-bottom: 3rem;
+    }
+
+    .ic-hero_pattern-image {
+        height: 75vh;
+        overflow: hidden;
+        position: relative;
+        // animation: wipe-in-down 1.5s cubic-bezier(0.75, 0, 0.15, 1) both;
+        backface-visibility: hidden;
+        perspective: 1000;
+
+        svg {
+            position: absolute;
+            bottom: 0;
+            min-width: 1920px;
+        }
+
+        @media only screen and (max-width: 480px) {
+            height: 62.5vh;
+        }
+    }
+
+    .ic-hero_pattern-content,
+    & ~ section {
+        // animation: wipe-in-down 1.5s cubic-bezier(0.75, 0, 0.15, 1) 1.5s both;
+    }
+
+    .ic-hero_pattern-content {
+        padding-top: 4.5rem;
+
+        @media screen and (min-width: $breakpoint-md) {
+            padding-top: 6rem;
+        }
+    }
+
+    .ic-hero_pattern-headline {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ic-hero_pattern-logo {
+        max-width: 4.25rem;
+    }
+
+    .ic-hero_pattern-name {
+        font-family: var(--font-brand);
+        color: var(--color-brand-60);
+        font-size: var(--font-size-70);
+    }
+
+    .ic-hero_pattern-title {
+        font-size: 75%;
+        font-weight: normal;
+        font-size: var(--font-size-60);
+        color: var(--color-brand-90);
+    }
+}

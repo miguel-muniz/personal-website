@@ -1,0 +1,33 @@
+/*=============================================================================
+    COMPONENT
+    Introduction
+=============================================================================*/
+
+/*  General
+=============================================================================*/
+.ic-intro_section {
+    padding: 2.25rem 0;
+
+    @media screen and (min-width: $breakpoint-md) {
+        padding: 3rem 0;
+    }
+
+    .ic-intro_section-list {
+        padding-left: 0;
+        display: flex;
+    }
+
+    .ic-intro_section-item {
+        &:not(:first-child) {
+            margin-left: 0.5rem;
+        }
+    }
+
+    .ic-intro_section-link {
+        font-size: var(--font-size-40);
+
+        @media screen and (min-width: $breakpoint-md) {
+            font-size: var(--font-size-20);
+        }
+    }
+}

@@ -1,0 +1,60 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--color-brand-60);
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+h1 {
+    font-size: var(--font-size-90);
+    line-height: 1.25;
+}
+
+h2 {
+    font-size: var(--font-size-80);
+    line-height: 1.25;
+}
+
+h3 {
+    font-size: var(--font-size-70);
+    line-height: 1.25;
+}
+
+h4 {
+    font-size: var(--font-size-60);
+    line-height: 1.25;
+}
+
+h5 {
+    font-size: var(--font-size-50);
+    line-height: 1.25;
+}
+
+h6 {
+    font-size: var(--font-size-40);
+    line-height: 1.25;
+}
+
+p {
+    font-size: var(--font-size-30);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--color-brand-40);
+    transition: all ease-in-out 0.25s;
+
+    &:hover,
+    &:focus {
+        color: var(--color-brand-30);
+    }
+
+    &:active {
+        color: var(--color-brand-20);
+    }
+}

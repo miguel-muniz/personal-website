@@ -1,0 +1,22 @@
+---
+title: "Home"
+---
+
+{{#> layouts/homepage }}
+    {{> components/hero-pattern
+        title=about.name
+        subtitle=about.title
+    }}
+
+    {{> components/alert-section}}
+
+    {{> components/introduction-section
+        title=about.introduction
+        description=about.summary
+    }}
+
+    {{> components/experience-section}}
+
+    {{> components/skills-section}}
+
+    {{/layouts/homepage}}

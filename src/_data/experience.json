@@ -1,0 +1,41 @@
+{
+    "experience": [
+        {
+            "company": "University of Nebraska",
+            "title": "Web Designer & Developer",
+            "startMonth": "October",
+            "startDay": "15",
+            "startYear": "2018",
+            "responsibilities": {
+                "summary": "Worked with other designers and back-end developers to design and develop a design system and online learning platform used by the University of Nebraska's Online High School.",
+                "details": [
+                    "Collaborated with designers, developers, and product owners to plan future work.",
+                    "Documented user story details, acceptance criteria, and testing information.",
+                    "Met with back-end developers to discuss feature hand-off.",
+                    "Continuously tested and preformed quality assurance of front-end / implemented features.",
+                    "Maintained front-end prototypes and pattern library documentation."
+                ]
+            }
+        },
+        {
+            "company": "Firespring",
+            "title": "Front-End Web Developer",
+            "startMonth": "May",
+            "startDay": "18",
+            "startYear": "2017",
+            "endMonth": "October",
+            "endDay": "5",
+            "endYear": "2018",
+            "responsibilities": {
+                "summary": "Was on an internal team focused on setting up customers, developing custom themes, and maintaining websites for a proprietary CMS.",
+                "details": [
+                    "Developed custom themes for small to medium businesses based on internal designer's mockups.",
+                    "Performed quality assurance testing and bug reporting for other developers.",
+                    "Fixed client bug reports and completed client requests.",
+                    "Documented developer practices and worked with developers to improve our internal framework.",
+                    "Worked with customer service to set up clients in the CMS and migrated content from their previous website."
+                ]
+            }
+        }
+    ]
+}
