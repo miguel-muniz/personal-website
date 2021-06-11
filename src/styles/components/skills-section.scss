@@ -53,12 +53,16 @@
     }
 
     .ic-skills_section-proficient_list {
+        list-style-type: "\f005";
+
         li::marker {
             content: "\f005";
         }
     }
 
     .ic-skills_section-knowledgable_list {
+        list-style-type: "\f00c";
+
         li::marker {
             content: "\f00c";
         }
