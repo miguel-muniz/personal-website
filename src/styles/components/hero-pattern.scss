@@ -30,7 +30,7 @@
         position: relative;
         // animation: wipe-in-down 1.5s cubic-bezier(0.75, 0, 0.15, 1) both;
         backface-visibility: hidden;
-        perspective: 1000;
+        transform: translateZ(0);
 
         svg {
             position: absolute;
