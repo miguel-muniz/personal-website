@@ -22,4 +22,12 @@
             margin-left: 0.5rem;
         }
     }
+
+    .ic-intro_section-link {
+        font-size: var(--font-size-40);
+
+        @media screen and (min-width: $breakpoint-md) {
+            font-size: var(--font-size-20);
+        }
+    }
 }
