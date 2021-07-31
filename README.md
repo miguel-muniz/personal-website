@@ -14,7 +14,7 @@ This project uses the static site generator [11ty](https://www.11ty.dev/), and a
 4. A development server will be started and the website will load in your default browser
 
 ## Releasing
-Commits to `v2.0` are automatically built and released to https://beta.miguel-muniz.com/
+Commits to `main` are automatically built and released to https://miguel-muniz.com/
 
 ## Status
 <code><b>Current Version</b>: 2.0</code>
