@@ -1,8 +1,11 @@
 module.exports = function (eleventyConfig) {
+    eleventyConfig.addPassthroughCopy("fonts");
+
     eleventyConfig.setFrontMatterParsingOptions({
         excerpt: true,
         excerpt_separator: "---"
     });
+
     eleventyConfig.setTemplateFormats([
         "yml",
         "png",
@@ -10,6 +13,7 @@ module.exports = function (eleventyConfig) {
         "jpeg",
         "svg"
     ]);
+
     return {
         dir: {
             input: "src",
