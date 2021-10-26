@@ -40,12 +40,20 @@ function media(cb) {
     cb();
 }
 
+// Copies over all fonts
+function fonts(cb) {
+    return src('src/fonts/**/*')
+        .pipe(dest('dist/fonts/'));
+    cb();
+}
+
 // Watches for changes and runs the appropriate task
 function develop(cb) {
     watch('src/styles/**/*.{css,scss}', { events: 'all' }, styles);
     watch('src/scripts/**/*.{js}', { events: 'all' }, scripts);
     watch('src/**/*.{html,md,yml,11ty.js,liquid,njk,hbs,mustache,ejs,haml,pug,jstl}', { events: 'all' }, series(eleventy, reload));
     watch('src/images/**/*', { events: 'all' }, series(media));
+    watch('src/fonts/**/*', { events: 'all' }, series(fonts));
     cb();
 }
 
@@ -72,11 +80,12 @@ exports.eleventy = eleventy;
 exports.styles = styles;
 exports.scripts = scripts;
 exports.media = media;
+exports.fonts = fonts;
 exports.develop = develop;
 exports.serve = serve;
 
 // Monotasks
 // Build - Compiles all files
-exports.build = series(eleventy, styles, scripts, media);
+exports.build = series(eleventy, styles, scripts, media, fonts);
 // Default - Compiles all files, watches for file changes, starts local server
-exports.default = series(eleventy, styles, scripts, media, parallel(develop, serve));
+exports.default = series(eleventy, styles, scripts, media, fonts, parallel(develop, serve));

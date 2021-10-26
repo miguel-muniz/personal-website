@@ -1,6 +1,4 @@
 module.exports = function (eleventyConfig) {
-    eleventyConfig.addPassthroughCopy("fonts");
-
     eleventyConfig.setFrontMatterParsingOptions({
         excerpt: true,
         excerpt_separator: "---"
