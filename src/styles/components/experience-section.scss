@@ -1,6 +1,10 @@
 .ic-experience_section {
     padding: 2.25rem 0;
 
+    #experience-and-education {
+        scroll-margin-top: 1rem;
+    }
+
     @media screen and (min-width: $breakpoint-md) {
         padding: 3rem 0;
     }

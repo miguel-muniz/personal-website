@@ -1,5 +1,6 @@
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 
     &:focus-within {
         scroll-behavior: smooth;
@@ -42,6 +43,7 @@ ol[role="list"] {
 img,
 picture {
     max-width: 100%;
+    height: auto;
     display: block;
 }
 
