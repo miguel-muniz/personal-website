@@ -10,17 +10,14 @@ title: "Home"
 
     {{> components/quick-links}}
 
-    {{!-- {{> components/alert-section}} --}}
-
-    {{> components/introduction-section
-        title=about.introduction
-        description=about.summary
-    }}
-
-    {{> components/experience-section}}
-
-    {{> components/skills-section}}
-
-    {{> components/projects}}
-
+    <main>
+        {{!-- {{> components/alert-section}} --}}
+        {{> components/introduction-section
+            title=about.introduction
+            description=about.summary
+        }}
+        {{> components/experience-section}}
+        {{> components/skills-section}}
+        {{> components/projects}}
+    </main>
     {{/layouts/homepage}}
