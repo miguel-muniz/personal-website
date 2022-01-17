@@ -69,9 +69,19 @@
         font-family: var(--font-brand);
         color: var(--color-brand-60);
         font-size: var(--font-size-70);
-        text-rendering: geometricPrecision;
+        text-rendering: optimizeLegibility;
         font-weight: 600;
-        -webkit-font-feature-settings: "kern" 1;
+
+        @media not all and (min-resolution: 0.001dpcm) {
+            @supports (-webkit-appearance: none) and (stroke-color: transparent) {
+                .selector {
+                    property: value;
+                }
+            }
+        }
+         {
+            letter-spacing: -0.25rem;
+        }
     }
 
     .ic-hero_pattern-title {
