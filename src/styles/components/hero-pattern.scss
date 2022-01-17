@@ -74,7 +74,7 @@
 
         @media not all and (min-resolution: 0.001dpcm) {
             @supports (-webkit-appearance: none) and (stroke-color: transparent) {
-                letter-spacing: -0.05rem;
+                letter-spacing: -0.1rem;
             }
         }
     }
