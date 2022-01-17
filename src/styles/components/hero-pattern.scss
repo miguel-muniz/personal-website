@@ -69,7 +69,8 @@
         font-family: var(--font-brand);
         color: var(--color-brand-60);
         font-size: var(--font-size-70);
-        text-rendering: optimizeLegibility;
+        text-rendering: geometricPrecision;
+        // font-weight: 400;
     }
 
     .ic-hero_pattern-title {
