@@ -76,6 +76,11 @@
             font-size: var(--font-size-30);
             list-style: none;
             transition: all 0.25s ease-in-out;
+            display: inline-block;
+
+            &:focus-visible {
+                outline: 0;
+            }
 
             &:before {
                 content: "More";
