@@ -1,12 +1,12 @@
 .ic-experience_section {
     padding: 2.25rem 0;
 
-    #experience-and-education {
-        scroll-margin-top: 1rem;
-    }
-
     @media screen and (min-width: $breakpoint-md) {
         padding: 3rem 0;
+    }
+
+    #experience-and-education {
+        scroll-margin-top: 1rem;
     }
 
     .ic-experience_section-title {
@@ -51,6 +51,12 @@
         margin-bottom: 0;
         color: var(--color-brand-60);
         font-size: var(--font-size-50);
+    }
+
+    .ic-experience_section-period {
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 
     .ic-experience_section-subtitle {

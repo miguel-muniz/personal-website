@@ -1,0 +1,7 @@
+.ic-outro {
+    padding: 2.25rem 0;
+
+    @media screen and (min-width: $breakpoint-md) {
+        padding: 3rem 0;
+    }
+}

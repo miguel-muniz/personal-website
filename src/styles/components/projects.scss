@@ -1,5 +1,9 @@
 .ic-projects {
-    padding: 3rem 0;
+    padding: 2.5rem 0;
+
+    @media screen and (min-width: $breakpoint-md) {
+        padding: 3rem 0;
+    }
 
     #projects-and-portfolio {
         scroll-margin-top: 1rem;

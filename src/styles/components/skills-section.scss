@@ -1,12 +1,12 @@
 .ic-skills_section {
     padding: 2.25rem 0;
 
-    #skills-and-strengths {
-        scroll-margin-top: 1rem;
-    }
-
     @media screen and (min-width: $breakpoint-md) {
         padding: 3rem 0;
+    }
+
+    #skills-and-strengths {
+        scroll-margin-top: 1rem;
     }
 
     .ic-skills_section-list {

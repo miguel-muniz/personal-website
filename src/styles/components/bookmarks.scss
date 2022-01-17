@@ -1,0 +1,35 @@
+.ic-bookmarks {
+    padding: 2.5rem 0;
+
+    @media screen and (min-width: $breakpoint-md) {
+        padding: 3rem 0;
+    }
+
+    #bookmarks {
+        scroll-margin-top: 1rem;
+    }
+
+    .ic-bookmarks-title + p {
+        margin-bottom: 1.5rem;
+    }
+
+    .ic-bookmarks-item {
+        display: flex;
+        flex-direction: column;
+
+        &:not(:last-child) {
+            margin-bottom: 3rem;
+        }
+    }
+
+    .ic-bookmarks-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.25rem;
+    }
+
+    h4 {
+        font-size: var(--font-size-50);
+    }
+}
