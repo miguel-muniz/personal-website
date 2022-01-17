@@ -71,6 +71,7 @@
         font-size: var(--font-size-70);
         text-rendering: geometricPrecision;
         font-weight: 600;
+        -webkit-font-feature-settings: "kern" 1;
     }
 
     .ic-hero_pattern-title {
